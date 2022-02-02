@@ -1,11 +1,10 @@
 
 ## Javascript Basics to Advanced
 Basics for beginners, move gradually to advanced level stuff
-* [Data Types](Basics/)
-* [Variables](Basics/)
-* [Order of Operation](Basics/)
-* [Operators and Expressions](Basics/)
-* [Conditionals](Basics/)
+* [Data Types](Basics/data_types.html)
+* [Variables](Basics/variables.html)
+* [Conditional statements](Basics/conditionals.html)
+* [Operators](Basics/Operators.html)
 * [Type Coercion](Basics/)
 * [Loops](Basics/)
 * [Functions and Hoisting](Basics/)
