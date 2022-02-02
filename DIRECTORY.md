@@ -1,7 +1,7 @@
 
 ## Javascript Basics to Advanced
 Basics for beginners, move gradually to advanced level stuff
-* [Data Types](Basics/file_name.extension)
+* [Data Types](Basics/)
 * [Variables](Basics/)
 * [Order of Operation](Basics/)
 * [Operators and Expressions](Basics/)
@@ -9,25 +9,22 @@ Basics for beginners, move gradually to advanced level stuff
 * [Type Coercion](Basics/)
 * [Loops](Basics/)
 * [Functions and Hoisting](Basics/)
-* [Document Object Model (DOM)](Intermediate/)
-* Testing
-  * Unit testing
-    - AB...
-    - ab...
-  * Test driven development
+* [Document Object Model (DOM)](Intermediate_and_Advanced/)
+* [Browser Object Model](Intermediate_and_Advanced/)
+* [Regular Expressions](Intermediate_and_Advanced)
+* [HTTP Requests](Intermediate_and_Advanced)
 ## Strings
 ## File Handling
 ## Sending Emails
 ## Javascript OOP Concepts
 **Object-oriented programming** (OOP) is a method of structuring a program by bundling related properties and behaviors into individual **objects**.
-* [Classes and Instances](Intermediate/)
-* [Inheritance](Intermediate/)
-* [Encapsulation](Intermediate/)
-* [Polymorphism](Intermediate/)
-* [Data Abstraction](Intermediate/)
-## Database
+* [Classes and Instances](Javascript_OOP/)
+* [Inheritance](Javascript_OOP/)
+* [Encapsulation](Javascript_OOP/)
+* [Polymorphism](Javascript_OOP/)
+* [Data Abstraction](Javascript_OOP/)
 ## Libraries
-## Automation
-Small but useful scripts to automate your daily routines
+**jQuery**
 ## Web Programming
+## Database
 ## Socket Programming (Network Programming)
