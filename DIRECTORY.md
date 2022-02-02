@@ -1,6 +1,9 @@
 
 ## Javascript Basics to Advanced
 Basics for beginners, move gradually to advanced level stuff
+* [JS Home](Basics/JS_home.html)
+* [JS Output](Basics/JS_output.html)
+* [JS Syntax](Basics/JS_syntax.html)
 * [Data Types](Basics/data_types.html)
 * [Variables](Basics/variables.html)
 * [Conditional statements](Basics/conditionals.html)
