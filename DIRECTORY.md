@@ -1,7 +1,8 @@
 
 ## Javascript Basics to Advanced
 Basics for beginners, move gradually to advanced level stuff
-<<<<<<< HEAD
+<<<<<<< 
+
 * [Variables](Basics/)
 * [Data Types](Basics/)
 * [Order of Operation](Basics/)
