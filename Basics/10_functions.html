@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Functions</title>
+</head>
+<body>
+    <h1>JavaScript Functions</h1>
+    <p>A JavaScript function is a block of code designed to perform a particular task.<br /> A JavaScript function is executed when "something" invokes it (calls it).</p>
+    <pre>
+        <h3>Function with two parameters</h3>
+        <code>
+            function total_sum(num1, num2) {
+                var sum = num1 + num2;
+                console.log(sum);
+              }
+              
+              total_sum(2, 3);
+        </code>
+        <samp>
+            5
+        </samp>
+        <h3>Function returning a value</h3>
+        <code>
+            //Function returning a value
+            function total_sum(num1, num2) {
+              var sum = num1 + num2;
+              return sum;
+            }
+
+            var result = total_sum(5, 3);
+            console.log(result);
+        </code>
+        <samp>
+            8
+        </samp>
+        <h3>Scope and Environment</h3>
+        <code>
+            var num1 = 5; //global scope
+            function sum (a) {
+            var num2 = 2; //local to this function
+            var result = num1+num2+a;
+            console.log(result);
+            }
+
+            sum(5);
+        </code>
+        <samp>
+            12
+        </samp>
+        <dl>
+        <dt>Hoisting</dt>
+        <dd>The mechanism of where variables and functions can be used before <br />
+            declaring then is called Hoisting. OR Hoisting is JavaScript's default behavior of moving declarations to the top.</dd>
+        </dl>
+    </pre>
+</body>
+</html>

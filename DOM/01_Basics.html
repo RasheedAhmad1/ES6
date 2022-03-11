@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <p>When a web page is loaded, the browser creates a Document Object Model of the page.</p>
+    <img src="../assets/DOM.png" alt="Document Object Model" width="550" height="300"/>
+
+    <div id="demo"></div>
+
+    <h2>JavaScript Validation</h2>
+    <p>Please enter a number between 1 and 10</p>
+    <input id="iname">
+    <button type="button" onclick="validation()">Submit</button>
+    <p id="data"></p>
+
+    <script>
+        document.getElementById('demo').innerHTML = "Date: " + Date();
+
+        function validation() {
+            let x = document.getElementById('iname').value;
+            let text;
+            if( isNaN(x) || x<1 || x>10 ) {
+                text = 'Invalid Input';
+            } else {
+                text = 'Valid Input';
+            }
+        document.getElementById('data').innerHTML = text;
+        }
+
+    </script>
+</body>
+</html>

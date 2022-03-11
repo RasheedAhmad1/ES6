@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Type Coercion</title>
+    </head>
+    <body>
+        <h1>Type Coercion</h1>
+        <p>Conversion of data type from one to another is called Type Coercion</p>
+        <p>Have two types</p>
+        <ul>
+            <li>Imlicit Coercion: Run automatically by JavaScript</li>
+            <li>Explicit Coercion: Done programatically by us</li>
+        </ul>
+
+        <!-- Note: Some useful HTML tags -->
+        <!-- The <kbd> element defines keyboard input
+        The <samp> element defines sample output from a computer program
+        The <code> element defines a piece of computer code
+        The <var> element defines a variable in programming or in a mathematical expression
+        The <pre> element defines preformatted text -->
+
+        <h4> Imlicit Example:</h4>
+        <pre>
+            <code>
+                var numOne = 5;
+                var numTwo = "Hello";
+                var sum = numOne + numTwo;
+                console.log(sum);
+            </code>
+            <samp>
+                "Hello5"
+                The result is a string which is automatically done by JS depending upon the operation
+                Check its type - typeof(sum) - string
+            </samp>
+        </pre>
+        
+        <h4>Explicit Example:</h4>
+        <ul>
+            <li>To Number: Number()</li>
+            <li>To String: String()</li>
+            <li>To Boolean: Boolean()</li>
+        </ul>
+        <pre>
+            <code>
+                <!-- To Number -->
+                console.log(Number(true), typeof(Number(true))); --> 1 Number 
+                console.log(Number(5), typeof(Number(5))); --> 5 Number
+                console.log(Number(-2), typeof(Number(-2))); --> -2 Number
+                console.log(Number(2.5), typeof(Number(2.5))); --> 2.5 Number 
+                console.log(Number('4'), typeof(Number('4'))); --> 4 Number
+                console.log(Number('Hello'), typeof(Number('Hello'))); --> NaN Number
+            </code>
+        </pre>
+        
+    </body>
+</html>
