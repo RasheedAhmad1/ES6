@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Forms</title>
+    </head>
+    <body>
+        <h1>JavaScript Forms</h1>
+        <p>HTML form validation can be done by JavaScript.<br />
+        If a form field (fname) is empty, this function alerts a message, and returns false,<br /> to prevent the form from being submitted:</p>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;script&gt;
+                            function validateForm() {
+                            let x = document.forms["myForm"]["fname"].value;
+                            if (x == "") {
+                                alert("Name must be filled out");
+                                return false;
+                              }
+                            }
+                        &lt;/script&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h2&gt;JavaScript Validation&lt;/h2&gt;
+                        &lt;form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post"&gt;
+                            Name: &lt;input type="text" name="fname"&gt;
+                            &lt;input type="submit" value="Submit"&gt;
+                        &lt;/form&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <h2>JavaScript Can Validate Numeric Input</h2>
+        <p>JavaScript is often used to validate numeric input:</p>
+        <pre>
+            <code>
+                &lt;div id="demo">&lt;/div&gt;
+                &lt;h2&gt;JavaScript Validation&lt;/h2&gt;
+                &lt;p&gt;Please enter a number between 1 and 10&lt;/p&gt;
+                &lt;input id="iname"&gt;
+                &lt;button type="button" onclick="validation()"&gt;Submit&lt;/button&gt;
+                &lt;p id="data">&lt;/p&gt;
+                &lt;script>
+                    document.getElementById('demo').innerHTML = "Date: " + Date();
+                    function validation() {
+                        let x = document.getElementById('iname').value;
+                        let text;
+                        if( isNaN(x) || x&lt;1 || x&gt;10 ) {
+                            text = 'Invalid Input';
+                        } else {
+                            text = 'Valid Input';
+                        }
+                    document.getElementById('data').innerHTML = text;
+                    }
+                &lt;/script&gt;
+            </code>
+        </pre>
+        <h2>Automatic HTML Form Validation</h2>
+        <p>HTML form validation can be performed automatically by the browser:<br />
+        If a form field (fname) is empty, the required attribute prevents this form from being submitted:</p>
+    </body>
+</html>
