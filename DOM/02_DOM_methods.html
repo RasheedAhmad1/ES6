@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>DOM Methods</title>
-</head>
-<body>
-    <h1>JavaScript - HTML DOM Methods</h1>
-    <p>HTML DOM methods are actions you can perform (on HTML Elements).<br />
-    HTML DOM properties are values (of HTML Elements) that you can set or change.</p>
-    <h2>The DOM Programming Interface</h2>
-    <p>The HTML DOM can be accessed with JavaScript (and with other programming languages).<br />
-        In the DOM, all HTML elements are defined as <b>objects</b>.<br />
-        The programming interface is the properties and methods of each object.<br />
-        A <b>property</b> is a value that you can get or set (like changing the content of an HTML element).<br />
-        A <b>method</b> is an action you can do (like add or deleting an HTML element).</p>
-    <h2>Example:</h2>
-    <p>The following example changes the content (&lt;font color="#ff0000"&gt;the innerHTML&lt;/font&gt;) of the &lt;font color="#ff0000"&gt;<p>&lt;/font&gt; element with &lt;font color="#ff0000"&gt;id="demo"&lt;/font&gt;:</p>
-    <pre>
-        <code>
-             &lt;html&gt;
-              &lt;body&gt;
-                &lt;p id="demo"&gt;&lt;/p&gt;
-                    
-                &lt;script&gt;
-                 document.getElementById("demo").innerHTML = "Hello World!";
-                &lt;/script&gt;
-                
-              &lt;/body&gt;
-             &lt;/html&gt;
-        </code>
-    </pre>
-    <p>In the example above, &lt;font color="#ff0000"&gt;getElementById&lt;/font&gt; is a <b>method</b>, <br />while &lt;font color="#ff0000"&gt;innerHTML&lt;/font&gt; is a <b>property</b>.</p>
-    <h2>The getElementById Method</h2>
-    <p>The most common way to access an HTML element is to use the &lt;font color="#ff0000"&gt;id&lt;/font&gt; of the element.<br />
-        In the example above the &lt;font color="#ff0000"&gt;getElementById&lt;/font&gt; method used &lt;font color="#ff0000"&gt;id="demo"&lt;/font&gt; to find the element.</p>
-    <h2>The innerHTML Property</h2>
-    <p>The easiest way to get the content of an element is by using the &lt;font color="#ff0000"&gt;innerHTML&lt;/font&gt; property.
-    The &lt;font color="#ff0000"&gt;innerHTML&lt;/font&gt; property is useful for getting or replacing the content of HTML elements.</p>
-    <p><i>The &lt;font color="#ff0000"&gt;innerHTML&lt;/font&gt; property can be used to get or change any HTML element, including &lt;font color="#ff0000"&gt;&lt;html&gt;&lt;/font&gt; and &lt;font color="#ff0000"&gt;&lt;body&gt;&lt;/font&gt;.</i></p>
-    <h2>The HTML DOM Document Object</h2>
-    <p>The document object represents your web page.<br />
-    If you want to access any element in an HTML page, you always start with accessing the document object.</p>
-</body>
+    <head>
+        <title>DOM Methods</title>
+    </head>
+    <body>
+        <h1>JavaScript - HTML DOM Methods</h1>
+        <p>HTML DOM methods are actions you can perform (on HTML Elements).<br />
+        HTML DOM properties are values (of HTML Elements) that you can set or change.</p>
+        <h2>The DOM Programming Interface</h2>
+        <p>The HTML DOM can be accessed with JavaScript (and with other programming languages).<br />
+            In the DOM, all HTML elements are defined as <b>objects</b>.<br />
+            The programming interface is the properties and methods of each object.<br />
+            A <b>property</b> is a value that you can get or set (like changing the content of an HTML element).<br />
+            A <b>method</b> is an action you can do (like add or deleting an HTML element).</p>
+        <h2>Example:</h2>
+        <p>The following example changes the content (<font color="#ff0000">the innerHTML</font>)
+        of the <font color="#ff0000">element P</font> with <font color="#ff0000">id="demo"</font>:</p>
+        <pre>
+            <code>
+                &lt;html&gt;
+                    &lt;body&gt;
+                        &lt;p id="demo"&gt;&lt;/p&gt;
+                            
+                        &lt;script&gt;
+                        document.getElementById("demo").innerHTML = "Hello World!";
+                        &lt;/script&gt;
+                        
+                    &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p>In the example above, <font color="#ff0000">getElementById</font> is a <b>method</b>, <br />while <font color="#ff0000">innerHTML</font> is a <b>property</b>.</p>
+        <h2>The getElementById Method</h2>
+        <p>The most common way to access an HTML element is to use the <font color="#ff0000">id</font> of the element.<br />
+            In the example above the <font color="#ff0000">getElementById</font> method is used to find the P element by providing the <font color="#ff0000">id="demo"</font>of the P element.</p>
+        <h2>The innerHTML Property</h2>
+        <p>The easiest way to get the content of an element is by using the <font color="#ff0000">innerHTML</font> property.
+        The <font color="#ff0000">innerHTML</font> property is useful for getting or replacing the content of HTML elements.</p>
+        <p><i>The <font color="#ff0000">innerHTML</font> property can be used to get or change any HTML element, including <font color="#ff0000">&lt;html&gt;</font> and <font color="#ff0000">&lt;body&gt;</font>.</i></p>
+        <h2>The HTML DOM Document Object</h2>
+        <p>The document object represents your web page.<br />
+        If you want to access any element in an HTML page, you always start with accessing the document object.</p>
+    </body>
 </html>
