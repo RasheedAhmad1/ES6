@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>JavaScript Arrays</title>
-</head>
-<body>
-    <h1>JavaScript Arrays</h1>
-    <p>Arrays are special type of object which stores a list of data</p>
-    <pre>
-        <code>
-            var person = ['Rasheed Ahmad', 26, 'Charsadda']
-            console.log(person[0]);
-            console.log(person[2]);
-            console.log(typeof(person));
+    <head>
+        <title>JavaScript Arrays</title>
+    </head>
+    <body>
+        <h1>JavaScript Arrays</h1>
+        <p>Arrays are special type of object which stores a list of data</p>
+        <pre>
+            <code>
+                var person = ['Rasheed Ahmad', 26, 'Charsadda']
+                console.log(person[0]);
+                console.log(person[2]);
+                console.log(typeof(person));
 
-            //Update a value 
-            console.log(person);
-            person[1] = 44;
-            console.log(person);
+                //Update a value 
+                console.log(person);
+                person[1] = 44;
+                console.log(person);
 
-            //Add new value at the end of the Array
-            person[person.length] = 'Lovely';
-            console.log(person);
-            //OR by using an in-built function to an element at the end of the Array
-            person.push('Mera');
-            console.log(person);
+                //Add new value at the end of the Array
+                person[person.length] = 'Lovely';
+                console.log(person);
+                //OR by using an in-built function to an element at the end of the Array
+                person.push('Mera');
+                console.log(person);
 
-            //Print length of the Array
-            console.log(person.length);
+                //Print length of the Array
+                console.log(person.length);
 
-            //Remove last element of the Array
-            person.pop();
-            console.log(person);
+                //Remove last element of the Array
+                person.pop();
+                console.log(person);
 
-            //Add or Remove at specific location
-            person.splice(2,1,'Nice Person');
-            console.log(person);
-            //Parameters: Ist-tarting position
-            //Second-how many items to be deleted
-            //Third-and so on items to be added
+                //Add or Remove at specific location
+                person.splice(2,1,'Nice Person');
+                console.log(person);
+                //Parameters: Ist-tarting position
+                //Second-how many items to be deleted
+                //Third-and so on items to be added
 
-            //Deleting a specific element
-            person.splice(2,1);
-            console.log(person);
+                //Deleting a specific element
+                person.splice(2,1);
+                console.log(person);
 
-            //Concatination
-            fruits = ['Apple', 'Orange', 'Mango'];
-            var newData = person.concat(fruits);
-            console.log(newData);
+                //Concatination
+                fruits = ['Apple', 'Orange', 'Mango'];
+                var newData = person.concat(fruits);
+                console.log(newData);
 
-            //Sorting Ascending and Descending
-            newData.sort(); //Ascending order
-            console.log(newData);
+                //Sorting Ascending and Descending
+                newData.sort(); //Ascending order
+                console.log(newData);
 
-            newData.reverse(); //Descending order
-            console.log(newData);
-        </code>
-    </pre>
-</body>
+                newData.reverse(); //Descending order
+                console.log(newData);
+            </code>
+        </pre>
+    </body>
 </html>
