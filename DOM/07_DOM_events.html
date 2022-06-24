@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DOM Events</title>
+    </head>
+    <body>
+        <h1>JavaScript Events</h1>
+        <p>When some action happens in the webpage, that action is called an Event.</p>
+        <ul>
+            <li>The user clicking mouse over a certain element</li>
+            <li>Hovering the cursor over a certain element</li>
+            <li>Pressing a key on the keyboard</li>
+            <li>Resizing or closing the browsers window</li>
+            <li>A webpage finishing loading</li>
+            <li>A form being submitted</li>
+            <li>A video being played, or paused, or finishing play</li>
+        </ul>
+        <h2>Handling events in JavaScript</h2>
+        <p>There are two ways to handle a JavaScript event</p>
+        <ul>
+            <li>Using <b>Events Properties</b>
+                <ul>
+                    <li>onload</li>
+                    <li>onunload</li>
+                    <li>onchange</li>
+                    <li>onmouseover</li>
+                    <li>onclick</li>
+                    <li>onmousedown</li>
+                    <li>onmouseup</li>
+                </ul>
+            </li> 
+            <li>Using <b>addEventListener()</b></li>
+            <li>And/OR <b>removeEventListener()</b>
+                <ul>
+                    <li>resize</li>
+                    <li>click</li>
+                    <li>mousemove</li>
+                    <li>mousedown</li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Method 1: Using <b>Events Properties</b></h4>
+        <p>An event listener listens for an event, when a certain event is fired</p>
+        <p>Syntax: <code>document.getElementById('btn').{<font color="#ff0000">eventProperty</font>} = function() {}</code></p>
+        <p>Example: <code>document.getElementById('btn').<font color="#ff0000">onClick</font> = function() {}</code></p>
+        <button id="btn1">Click Me!</button>
+        <script>
+            var result1 = document.getElementById('btn1');
+            result1.onclick = function () {
+                alert('I\'m Clicked');
+            }
+        </script>
+        <pre>
+            <p>Sample Code:</p>
+            <code>
+                var result = document.getElementById('btn1');
+                result.onclick = function () {
+                alert('I\'m Clicked');
+                }
+            </code>
+        </pre>
+
+        <h4>Method 2: Using <b>addEventListener()</b></h4>
+        <p>An event listener listens for an event, when a certain eventName is fired</p>
+        <p>Syntax: <code>document.getElementById('btn').addEventListener({<font color="#ff0000">eventName</font>}, function() {});</code></p>
+        <p>Example: <code>document.getElementById('btn').addEventListener('<font color="#ff0000">click</font>', = function() {})</code></p>
+        <button id="btn2">Hover Me!</button>
+        <script>
+            var result2 = document.getElementById('btn2');
+            result2.addEventListener('mouseover', onHoverFunction);
+
+            function onHoverFunction () {
+                alert('I\'m hovered!');
+            }
+        </script>
+        <pre>
+            <p>Sample Code:</p>
+            <code>
+                var result2 = document.getElementById('btn2');
+                result2.addEventListener('mouseover', onHoverFunction);
+
+                function onHoverFunction () {
+                alert('I\'m hovered!');
+                }
+            </code>
+        </pre>
+        <p><font color="#ff0000">Only use the function reference 'function_name' and don't call the function 'function_name()'.</font></p>
+        <p><font color="#ff0000">Note that you don't use the "on" prefix for the event; use "click" instead of "onclick".</font></p>
+
+        <p>Exercise: Write a script to change the backgorund color by clicking.</p>
+    </body>
+</html>
