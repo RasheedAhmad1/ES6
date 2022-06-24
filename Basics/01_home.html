@@ -25,12 +25,15 @@
             <li>External JavaScript can not have any script tags.</li>
             <li>External scripts are practical when the same code is used in many different web pages.</li>
             <li>To use an external script, put the name of the script file in the src (source) attribute of a &lt;script&gt; tag </li>
-            <li>You can place an external script reference in &lt;head&gt; or &lt;body&gt; as you like.<br />The script will behave as if it was located exactly where the &lt;script&gt; tag is located.</li>
+            <li>You can place an external script reference in &lt;head&gt; or &lt;body&gt; as you like.<br />
+                The script will behave as if it was located exactly where the &lt;script&gt; tag is located.</li>
         </ul>
 
         <h2>Demo JavaScript in Head and Body</h2>
         <p id="demo">A Paragraph</p>
         <button type="button" onclick="myFunction()">Try it</button>
+        <p><font color="#ff0000">Note! Placing scripts at the bottom of the &lt;body&gt; element improves the display speed, 
+        <br />because script interpretation slows down the display.</font></p>
 
         <!-- JS script placed in the body -->
         <script>
