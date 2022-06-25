@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keyboard Events</title>
+</head>
+<body>
+    <h1>Keyboard Events</h1>
+    <p>The keyboard events are triggered when the user press a key from the keyboard.</p>
+    <p>There are three keyboard events</p>
+    <dl>
+        <dt>Keydown</dt>
+        <dd>It is triggered when any key is pressed on the keyboard.</dd>
+        <dt>keyup</dt>
+        <dd>Triggered whan a key is released after its keydown event.</dd>
+        <dt>keypress</dt>
+        <dd>Is triggered when any key except shift, function, capslock is in pressed position.</dd>
+    </dl>
+    <script>
+        // Keydown Event
+        // document.body.addEventListener('keydown', function() {
+        //     console.log('A key is pressed!');
+        // });
+        document.body.addEventListener('keydown', function(e) {
+            var keyDown = e.keyCode;
+            console.log(keyDown + 'Key Down');
+        });
+
+        // Keypress Event
+        document.body.addEventListener('keypress', function(e) {
+            var keyPress = e.keyCode;
+            console.log(keyPress + 'Key Press');
+        });
+
+        // Keyup Event
+        document.body.addEventListener('keyup', function(e) {
+            var keyUp = e.keyCode;
+            console.log(keyUp + 'Key Up');
+        });
+    </script>
+</body>
+</html>
