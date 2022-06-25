@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Events</title>
+    </head>
+    <body>
+        <h1>DOM Form Events</h1>
+        <dl>
+            <dt>Change:</dt>
+            <dd>This event is triggered when the content of and input field is changed or when the user selects the value from the dropdown etc</dd>
+            <dt>Focus:</dt>
+            <dd>The event is triggered when the input field is focused by the user</dd>
+            <dt>blur:</dt>
+            <dd>The event is triddered when the input field losed focus</dd>
+            <dt>Submit:</dt>
+            <dd>This event is triggered when the user clicks the submit button</dd>
+        </dl>
+        <p>Explanation:</p>
+        <form id="login_form">
+            <label for="name">Name:</label><br />
+            <input id="name" name="name" placeholder="Enter Name"><br />
+            <label for="password">Password:</label><br />
+            <input id="password" name="password" placeholder="Enter Password"><br />
+            <button id="btn">Submit</button>
+        </form>
+        <script>
+            var result = document.getElementById('name');
+            
+            // Input
+            result.addEventListener('input', function(event) {
+                var currentValue = event.target.value;
+                console.log(currentValue);
+            });
+
+            // Focus
+            result.addEventListener('focus', function() {
+                console.log('Element focused!');
+            });
+
+            // Blur
+            result.addEventListener('blur', function() {
+                console.log('Element blured!');
+            });
+
+            // Submit
+            var formData = document.getElementById('login_form');
+            formData.addEventListener('submit', function() {
+                alert('Form being submitted!');
+            });
+
+            // Removing default behaviour of form i.e to not reset the field values after submission
+            formData.addEventListener('submit', function(e) {
+                e.preventDefault();
+            });
+        </script>
+    </body>
+</html>
