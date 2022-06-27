@@ -32,8 +32,9 @@
 
             .card {
                 /* border: 2px solid green; */
+                background-color: darkcyan;
                 text-align: center;
-                padding: 4px 2px;
+                padding: 8px 4px;
             }
 
             .card h3 {
@@ -96,11 +97,11 @@
                         <h3>MouseOver Event triggered</h3>
                         <h4>0</h4>
                     </div>
-                    <div class="card">
+                    <div id="enter" class="card">
                         <h3>MouseEnter Event triggered</h3>
                         <h4>0</h4>
                     </div>
-                    <div class="card">
+                    <div id="move" class="card">
                         <h3>MouseMove Event triggered</h3>
                         <h4>0</h4>
                     </div>
@@ -143,13 +144,31 @@
             });
 
             // Mouse Over event
-            var over = document.getElementById('#over');
+            var over = document.getElementById('over');
             var overCount = 0;
             over.addEventListener('mouseover', function() {
-                var elementCount = document.querySelector('#over > h4');
+                var elementCounter = document.querySelector('#over > h4');
                 overCount++;
-                elementCount.innerHTML = overCount;
+                elementCounter.innerHTML = overCount;
             });
+
+            // Mouse Enter event
+            var enter = document.getElementById('enter');
+            var enterCount = 0;
+            enter.addEventListener('mouseenter', function() {
+                var elementCounter = document.querySelector('#enter > h4');
+                enterCount++;
+                elementCounter.innerHTML = enterCount;
+            });
+
+            // Mouse Move event
+            var move = document.getElementById('move');
+            var moveCounter = 0;
+            move.addEventListener('mousemove', function() {
+                var elementCounter = document.querySelector('#move > h4');
+                moveCounter++;
+                elementCounter.innerHTML = moveCounter;
+            })
 
         </script>
     </body>
