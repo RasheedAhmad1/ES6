@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Creating HTML Elements</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                background-color: gray;
+                text-align: center;
+                padding: 12px 0;
+            }
+
+            .theory {
+                padding: 12px 0;
+            }
+
+            #add-element {
+                display: inline-flex;
+                height: 28px;
+                padding: 5px;
+                background-color: lightcoral;
+                font-family: 'Quicksand', sans-serif;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+            }
+            /* #main {
+                border: 2px solid red;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            } */
+            ul {
+                width: auto;
+                margin-top: 14px;
+                /* border: 2px solid red; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+
+            li {
+                list-style-type: none;
+                width: 300px;
+                background-color: ghostwhite;
+                margin: 2px 0;
+                padding: 6px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="theory">
+                <h1>Creating HTML Elements</h1>
+            </div>
+            <div class="practical">
+                <button id="add-element">Add Element</button>
+                <ul id="list-items">
+                    <li id="item1">Item 1</li>
+                    <li id="item2">Item 2</li>
+                </ul>
+            </div>
+        </div>
+        <p>Exercise: Todo List</p>
+        <script>
+            var button = document.getElementById('add-element');
+            var list = document.getElementById('list-items');
+
+            button.addEventListener('click', function() {
+                // Create new HTML element
+                var new_element = document.createElement('li'); 
+
+                // Create new Text Node
+                var new_node = document.createTextNode('Item ' + (list.childElementCount+1));
+
+                // Append the Text Node to the newly created HTML element
+                new_element.appendChild(new_node);
+
+                // Create ID for the new HTML element
+                new_element.id = "item" + (list.childElementCount+1);
+
+                // Appent the new HTML element to the list
+                // list.appendChild(new_element); commented for firstElementChild
+
+                // Now grab the Items count number
+                // var count = list.childElementCount;
+                // console.log(count); Used in created node above
+
+                // Add an element before a certain element
+                var first = list.firstElementChild;
+                list.insertBefore(new_element, first);
+            });
+        </script>
+    </body>
+</html>
