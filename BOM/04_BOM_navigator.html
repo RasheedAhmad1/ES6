@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Navigator</title>
+    </head>
+    <body>
+        <h1>JavaScript Window Navigator</h1>
+        <p>The window.navigator object contains information about the visitor's browser.</p>
+        <h2>Window Navigator</h2>
+        <p>The window.navigator object can be written without the window prefix.<br />
+        Some examples:</p>
+        <ul>
+            <li>navigator.appName
+            <li>navigator.appCodeName</li>
+            <li>navigator.platform</li>
+        </ul>
+        <h2>Browser Cookies</h2>
+        <p>The cookieEnabled property returns true if cookies are enabled, otherwise false:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <h2>The Navigator Object</h2>
+                        <p>The cookieEnabled property returns true if cookies are enabled:</p>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML =
+                            "navigator.cookieEnabled is " + navigator.cookieEnabled;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>Browser Application Name</h2>
+        <p>The appName property returns the application name of the browser:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML =
+                            "navigator.appName is " + navigator.appName;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>Browser Application Code Name</h2>
+        <p>The appCodeName property returns the application code name of the browser:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML =
+                            "navigator.appCodeName is " + navigator.appCodeName;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>The Browser Engine</h2>
+        <p>The product property returns the product name of the browser engine:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML =
+                            "navigator.product is " + navigator.product;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>The Browser Version</h2>
+        <p>The appVersion property returns version information about the browser:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML = navigator.appVersion;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>The Browser Agent</h2>
+        <p>The userAgent property returns the user-agent header sent by the browser to the server:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML = navigator.userAgent;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>The Browser Platform</h2>
+        <p>The platform property returns the browser platform (operating system):</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML = navigator.platform;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>The Browser Language</h2>
+        <p>The language property returns the browser's language:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML = navigator.language;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>Is The Browser Online?</h2>
+        <p>The onLine property returns true if the browser is online:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML = navigator.onLine;
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+
+        <h2>Is Java Enabled?</h2>
+        <p>The <code>javaEnabled()</code> method returns true if Java is enabled:</p>
+        <p>Example:</p>
+        <pre>
+            <code>
+                <html>
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            document.getElementById("demo").innerHTML = navigator.javaEnabled();
+                        </script>
+                    </body>
+                </html>
+            </code>
+        </pre>
+    </body>
+</html>
