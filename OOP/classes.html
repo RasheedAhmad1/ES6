@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Classes</title>
+    </head>
+    <body>
+        <h1>JavaScript Classes</h1>
+        <p>ECMAScript 2015, also known as ES6, introduced JavaScript Classes.<br />
+        JavaScript Classes are templates for JavaScript Objects.</p>
+        <h2>JavaScript Class Syntax</h2>
+        <p>Use the keyword <font color="#ff0000">class</font> to create a class.<br />
+        Always add a method named <font color="#ff0000">constructor()</font>:<br />
+        Example:</p>
+        <pre>
+            <code>
+                class Employee {
+                    constructor (name, age) {
+                        this.name = name;
+                        this.age = age;
+                    }
+                }
+            </code>
+        </pre>
+        <p>The example above creates a class named "Employee".<br />
+        The class has two initial properties: "name" and "age".</p>
+        <h2>Using a class</h2>
+        <p>When you have a class, you can use the class to create objects:<br />
+        Example:</p>
+        <code>let Employee1 = new Employee('Ali', 24);<br />
+              let Empoyee2 = new Employee('Ahmad' 25);</code>
+        <p>The example above uses the Car class to create two Car objects.<br />
+        The constructor method is called automatically when a new object is created.</p>
+        <h2>The Constructor Method</h2>
+        <p>The constructor method is a special method:</p>
+        <ul>
+            <li>It has to have the exact name "constructor"</li>
+            <li>It is executed automatically when a new object is created</li>
+            <li>It is used to initialize object properties</li>
+        </ul>
+        <p>If you do not define a constructor method, JavaScript will add an empty constructor method.</p>
+        <h2>Class Methods</h2>
+        <p>Create a Class method named "joining_date", that returns the employee "Joining Date":</p>
+        <pre>
+            <code>
+                class Employee {
+                    constructor(name, age, year) {
+                        this.age = age;
+                        this.name = name;
+                        this.year = year;
+                    }
+
+                    joining_date() {
+                        let date = new Date();
+                        return date.getFullYear() - this.year;
+                      }
+                }
+            </code>
+        </pre>
+        <p>Now:</p>
+        <code>
+            let emp1 = new Employee('Akram', 32);
+            console.log(emp1.joining_date());
+        </code>
+        <script>
+            class Employee {
+                    constructor(name, age, years_of_service) {
+                        this.age = age;
+                        this.name = name;
+                        this.year = years_of_service;
+                    }
+
+                    joining_date() {
+                        let date = new Date();
+                        return date.getFullYear() - this.year;
+                      }
+                }
+
+            let emp1 = new Employee('Akram', 32, 8);
+            console.log(emp1.joining_date());
+        </script>
+    </body>
+</html>
