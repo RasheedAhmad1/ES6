@@ -8,14 +8,14 @@
         <p>Arrays are special type of object which stores a list of data</p>
         <pre>
             <code>
-                var person = ['Rasheed Ahmad', 26, 'Charsadda']
+                var person = ['Rasheed Ahmad', 25, 'Charsadda']
                 console.log(person[0]);
                 console.log(person[2]);
                 console.log(typeof(person));
 
                 //Update a value 
                 console.log(person);
-                person[1] = 44;
+                person[1] = 26;
                 console.log(person);
 
                 //Add new value at the end of the Array
@@ -32,12 +32,13 @@
                 person.pop();
                 console.log(person);
 
-                //Add or Remove at specific location
+                //Add or Remove a value at a specific location
                 person.splice(2,1,'Nice Person');
                 console.log(person);
-                //Parameters: Ist-tarting position
-                //Second-how many items to be deleted
-                //Third-and so on items to be added
+                //Parameters: 
+                //First - starting position
+                //Second - how many items to be deleted
+                //Third - and the items to be added
 
                 //Deleting a specific element
                 person.splice(2,1);
