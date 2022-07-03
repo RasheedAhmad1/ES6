@@ -63,20 +63,41 @@
         </code>
         <script>
             class Employee {
-                    constructor(name, age, years_of_service) {
-                        this.age = age;
-                        this.name = name;
-                        this.year = years_of_service;
+                    constructor(givenName, givenAge, givenYears_of_service) {
+                        this.name = givenName;
+                        this.age = givenAge;
+                        this.year = givenYears_of_service;
                     }
 
                     joining_date() {
                         let date = new Date();
                         return date.getFullYear() - this.year;
                       }
+                    
+                    // Static method: which can be used without an object
+                    static add(a, b) {
+                        return a*b;
+                    }
                 }
 
-            let emp1 = new Employee('Akram', 32, 8);
+            let emp1 = new Employee('Akram', 32, 10);
             console.log(emp1.joining_date());
+
+            // Calling static method
+            console.log(Employee.add(2, 3));
+        </script>
+
+        <h2>Inheritance</h2>
+        <script>
+            class Programmer extends Employee {
+                constructor(givenName, givenAge, givenYears_of_service, language) {
+                    super(givenName, givenAge, givenYears_of_service); // super() means to call the constructor of the parent class
+                    this.language = language;
+                }
+            }
+
+            let p1 = new Programmer('Ahad', 23, 4, 'JavaScript');
+            console.log(p1);
         </script>
     </body>
 </html>
