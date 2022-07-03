@@ -1,8 +1,55 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>JavaScript Output</title>
+        <style>
+            /* Removing default styling */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* Designing the file a little bit */
+            body {
+                background-color: #ffffff;
+                color: #3a3a3a;
+                margin: 12px 22px;
+                padding-left: 22px;
+            }
+
+            h1 {
+                text-align: center;
+                margin: 8px 0 16px 0;
+            }
+    
+            h1 {
+                font-family: "Segoe UI", Arial, sans-serif;
+                font-size: 42px;
+                font-weight: 400px;
+                line-height: 63px;
+            }
+
+            h2 {
+                font-family: "Segoe UI", Arial, sans-serif;
+                font-size: 32px;
+                font-weight: 400px;
+                line-height: 48px;
+            }
+
+            p, ul li { 
+                font-family: Verdana;
+                font-size: 15px;
+                line-height: 23px;
+            }
+
+            ul {
+                margin-left: 24px;
+            }
+        </style>
+    </head>
     <body>
-        <h1>JS Output</h1>
-        
+        <h1>JavaScript Output</h1>
         <h2>--- JavaScript Display Possibilities ---</h2>
         <p>Javascript can display data in different ways</p>
         <ul>
@@ -14,15 +61,17 @@
 
         <h2>--- Using innerHTML ---</h2>
         <p>- To access an HTML element, JavaScript can use the document.getElementById(id) method.<br />
-        - The id attribute defines the HTML element. The innerHTML property defines the HTML content:<br />
-        - Example</p>
-        <p>My first program</p>
+        - The id attribute defines the HTML element. The innerHTML property defines the HTML content:</p>
         <code>
             <p id="demo">I will be replaced.</p>
             <script>
                 document.getElementById("demo").innerHTML = "I am loaded";
             </script>
         </code>
+        <div class="frame">
+            <h3>Example</h3>
+            <p id="demo">I am a Paragraph</p>
+        </div>
 
         <h2>--- Using document.write() ---</h2>
         <p>- For testing purposes, it is convenient to use it<br />
