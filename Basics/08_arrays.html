@@ -57,5 +57,65 @@
                 console.log(newData);
             </code>
         </pre>
+        <h2>Array Methods</h2>
+        <h3>filter() method:</h3>
+        <script>
+            const items = [
+                { name: 'Bike', price: 200 },  
+                { name: 'Phone', price: 150 },  
+                { name: 'TV', price: 202 },  
+                { name: 'Movie', price: 10 },  
+                { name: 'Cycle', price: 140 },  
+                { name: 'Computer', price: 180 },  
+                { name: 'Mouse', price: 20 }
+            ]
+            // filter(): Fileter those items whose price is less than or equal to 100 dollars
+            const filteredItems = items.filter( (item) => {
+                return item.price <= 100;
+            });
+            console.log(filteredItems);
+
+            // map(): Convert the array into a new array
+            const mapedItems = items.map( (item) => {
+                return item.name;
+            });
+            console.log(mapedItems);
+
+            // find(): Find the 'Cycle' in the array
+            const foundItem = items.find( (item) => {
+                return item.name === 'Cycle';
+            });
+            console.log(foundItem);
+
+            // forEach(): Looping easily by avoiding the clunky long for loops
+            items.forEach( (item) => {
+                console.log(item.price);
+            });
+
+            // some(): Check if anything in an array returns true of false
+            // i.e If the array has inexpensive items return true else return false
+            const inexpensiveItems = items.some( (item) => {
+                return item.price <= 50;
+            });
+            console.log(inexpensiveItems);
+
+            // every(): some() checks atleast one item false under the expression but
+            // every() checks each and every item should fall under the expression.
+            const everyItem = items.every( (item) => {
+                // return item.price <= 100;
+                return item.price <= 202;
+            });
+            console.log(everyItem); // I) Retuns false - because there are items greater than 100 dollars
+            // The second will retrun true - because every item is less than or equal to 202 dollars
+
+            // includes(): Check if an array has the given item or not
+            const new_items = [1, 2, 3, 4];
+            const includedItem1 = new_items.includes(2);
+            const includedItem2 = new_items.includes(5);
+            console.log(includedItem1); // true
+            console.log(includedItem2); // false
+
+            // reduce(): 
+        </script>
     </body>
 </html>
