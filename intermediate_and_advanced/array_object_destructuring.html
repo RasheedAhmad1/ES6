@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array and Object Destruncting</title>
+</head>
+<body>
+    <h1>Array  and Object Destruncting</h1>
+    <h2>Array Destruncting</h2>
+    <script>
+        const alphabets = ['A', 'B', 'C', 'D', 'E', 'F']
+        const numbers = [1, 2, 3, 4]
+
+        // I
+        const [a, b] = alphabets;
+        console.log(a);
+        console.log(b);
+
+        // What if we want to skip an element
+        const [c, , e] = alphabets;
+        console.log(c);
+        console.log(e);
+
+        // But what about the rest elements, that's where 'spread operator' comes into play
+        const [f, ...rest] = alphabets;
+        console.log(f);
+        console.log(rest);
+
+        // Useful whan a function is required to return more than one value
+        function sumAndMultiply (a, b) {
+            return [a+b, a*b];
+        }
+        const [sum, multiply] = sumAndMultiply(2, 3);
+        console.log(`Sum is: ${sum}, and Multiplication is: ${multiply}`);
+
+    </script>
+    <h2>Object Destruncting</h2>
+    <script>
+        const employee = {
+            name: 'Sara',
+            age: 22,
+            DOB: '23/03/1996',
+            address: {
+                city: 'Peshawar',
+                state: 'KP'
+            }
+        }
+
+        const {name, age} = employee; // Work exact array dest. but instead of position based,
+        // it is based on the name of the key. If you want to use a different name then-->name: FirstName
+        // For default value set name= 'Amanda'
+        console.log(name, age);
+
+        // Destructuring nested objects
+        const {DOB, address: {city, state}} = employee;
+        console.log(DOB, city, state);
+    </script>
+</body>
+</html>
