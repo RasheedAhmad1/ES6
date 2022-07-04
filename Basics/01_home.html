@@ -92,12 +92,22 @@
             }
 
             .frame {
-                padding: 8px 20px;
-                margin: 24px -20px;
-                border-left: 22px solid #E7E9EB;
+                border: 2px solid red;
+                margin: 12px 0;
+                display: flex;
+                justify-content: space-around;
+            }
+            
+            #cards {
+                width: 400px;
+                border-top: 44px solid #E7E9EB;
                 border-right: 22px solid #E7E9EB;
-                border-top: 60px solid #E7E9EB;
-                border-bottom: 60px solid #E7E9EB;
+                border-bottom: 44px solid #E7E9EB;
+                border-left: 22px solid #E7E9EB;
+            }
+
+            #cards h3 {
+                margin-top: -44px;
             }
 
         </style>
@@ -128,13 +138,25 @@
             <li>You can place an external script reference in &lt;head&gt; or &lt;body&gt; as you like.<br />
                 The script will behave as if it was located exactly where the &lt;script&gt; tag is located.</li>
         </ul>
-
         <div class="frame">
-            <h3>JavaScript placed at the end of Body</h3>
-            <p id="demo">I am a Paragraph</p>
-            <button type="button" onclick="myFunction()">
-                <span class="button_text">Download</span>
-            </button>
+            <div id="cards">
+                <h3>Example</h3>
+                <p id="demo">I am a Paragraph</p>
+                <button type="button" onclick="myFunction()">
+                    <span class="button_text">Download</span>
+                </button>
+            </div>
+            <div id="cards">
+                <h3>Code</h3>
+                <pre>
+                    <code>
+                        &lt;p id="demo">I am a Paragraph&lt;/p&gt;
+                        &lt;button type="button" onclick="myFunction()"&gt;
+                            &lt;span class="button_text"&gt;Download&lt;/span&gt;
+                        &lt;/button&gt;
+                    </code>
+                </pre>
+            </div>
         </div>
         <p class="bottom"><span>Note!</span> Placing scripts at the bottom of the &lt;body&gt; element improves the display speed,<br />
             because script interpretation slows down the display.</p>
