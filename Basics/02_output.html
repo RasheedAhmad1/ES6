@@ -2,55 +2,12 @@
 <html>
     <head>
         <title>JavaScript Output</title>
-        <style>
-            /* Removing default styling */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            /* Designing the file a little bit */
-            body {
-                background-color: #ffffff;
-                color: #3a3a3a;
-                margin: 12px 22px;
-                padding-left: 22px;
-            }
-
-            h1 {
-                text-align: center;
-                margin: 8px 0 16px 0;
-            }
-    
-            h1 {
-                font-family: "Segoe UI", Arial, sans-serif;
-                font-size: 42px;
-                font-weight: 400px;
-                line-height: 63px;
-            }
-
-            h2 {
-                font-family: "Segoe UI", Arial, sans-serif;
-                font-size: 32px;
-                font-weight: 400px;
-                line-height: 48px;
-            }
-
-            p, ul li { 
-                font-family: Verdana;
-                font-size: 15px;
-                line-height: 23px;
-            }
-
-            ul {
-                margin-left: 24px;
-            }
-        </style>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <h1>JavaScript Output</h1>
-        <h2>--- JavaScript Display Possibilities ---</h2>
+        <h2>JavaScript Display Possibilities</h2>
         <p>Javascript can display data in different ways</p>
         <ul>
             <li>Writing into an HTML element, using innerHTML</li>
@@ -59,49 +16,141 @@
             <li>Writing into the browser console, using console.log()</li>
         </ul>
 
-        <h2>--- Using innerHTML ---</h2>
-        <p>- To access an HTML element, JavaScript can use the document.getElementById(id) method.<br />
-        - The id attribute defines the HTML element. The innerHTML property defines the HTML content:</p>
-        <code>
-            <p id="demo">I will be replaced.</p>
-            <script>
-                document.getElementById("demo").innerHTML = "I am loaded";
-            </script>
-        </code>
-        <div class="frame">
-            <h3>Example</h3>
-            <p id="demo">I am a Paragraph</p>
+        <h2>Using innerHTML</h2>
+        <p>- To access an HTML element, JavaScript can use the document.getElementById('id-name') method.<br />
+        - The 'id' attribute defines the HTML element.<br />
+        - Then use 'innerHTML' property and set the value to a new one.<br />
+        - The 'innerHTML' property defines the HTML content.</p>
+        <div id="frame">
+            <div id="cards">
+                <h3>Example</h3>
+                <div id="content">
+                    <p id="trial">I'll be replace</p>
+                    <button type="button" onclick="myFunction()">
+                        <span class="button-text">Click Me!</span>
+                    </button>
+                    <!-- Here JavaScript code will load from external file  -->
+                </div>
+            </div>
+            <div id="cards">
+                <h3>Code</h3>
+                <div id="content">
+                    <code>
+                        <h4>HTML Code</h4>
+                        &lt;p id="trial"&gt;I will be replaced.&lt;/p&gt;<br />
+                        &lt;button type="button" onclick="myFunction()"&gt;<br />
+                            &lt;span class="button-text"&gt;Click Me!&lt;/span&gt;<br />
+                        &lt;/button&gt;
+                        <h4>JavaScript Code</h4>
+                        &lt;script&gt;<br />
+                        function myFunction() {<br />
+                            document.getElementById("trial").innerHTML = "I'm loaded.";<br />
+                          }<br />
+                        &lt;/script&gt;
+                    </code>
+                </div>
+            </div>
         </div>
 
-        <h2>--- Using document.write() ---</h2>
-        <p>- For testing purposes, it is convenient to use it<br />
-        - Example</p>
-        <code>
-            <p>My First Paragraph</p>
-            <script>
-                document.write(5+6);
-            </script>
-        </code>
+        <h2>Using document.write()</h2>
+        <p>- For testing purposes, it is convenient to use this method</p>
+        <div id="frame">
+            <div id="cards">
+                <h3>Example</h3>
+                <div id="content">
+                    <p>Click the button to load data by "document.write()"</p>
+                    <p id="paragraph"></p>
+                    <button type="button" onclick="loadData()">
+                        <span class="button-text">Load Data</span>
+                    </button>
+                    <!-- Here JavaScript code will load from external file  -->
+                </div>
+            </div>
+            <div id="cards">
+                <h3>Code</h3>
+                <div id="content">
+                    <code>
+                        <h4>HTML Code</h4>
+                        &lt;p&gt;Click the button to load data by "document.write()"&lt;p&gt;
+                        &lt;p "id="paragraph"&gt;&lt;p/&gt;
+                        &lt;button type="button" onclick="loadData()"&gt;<br />
+                            &lt;span class="button-text"&gt;Load Data!&lt;/span&gt;<br />
+                        &lt;/button&gt;
+                        <h4>JavaScript Code</h4>
+                        &lt;script&gt;<br />
+                        function myFunction() {<br />
+                            window.alert("Hey, I'm an alert!");<br />
+                          }<br />
+                        &lt;/script&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
         <p><i>Note: Using document.write() after an HTML document is loaded, will delete all existing HTML</i></p>
 
-        <h2>--- Using window.alert() ---</h2>
-        <p>- You can use an alert box to display data<br />
-        - Example</p>
-        <p>My First Paragraph</p>
-        <code>
-            <script>
-                window.alert('Hello');
-            </script>
-        </code>
+        <h2>Using window.alert()</h2>
+        <p>- You can use an alert box to display the data<br />
+        <div id="frame">
+            <div id="cards">
+                <h3>Example</h3>
+                <div id="content">
+                    <p>Click the button to load alert</p>
+                    <button type="button" onclick="loadAlert()">
+                        <span class="button-text">Load Alert!</span>
+                    </button>
+                    <!-- Here JavaScript code will load from external file  -->
+                </div>
+            </div>
+            <div id="cards">
+                <h3>Code</h3>
+                <div id="content">
+                    <code>
+                        <h4>HTML Code</h4>
+                        &lt;p&gt;Click the button to load alert&lt;p&gt;<br />
+                        &lt;button type="button" onclick="loadAlert()"&gt;<br />
+                            &lt;span class="button-text"&gt;Load Alert!&lt;/span&gt;<br />
+                        &lt;/button&gt;
+                        <h4>JavaScript Code</h4>
+                        &lt;script&gt;<br />
+                        function loadAlert() {<br />
+                            window.alert("Hey, I'm an alert!");<br />
+                        }<br />
+                        &lt;/script&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
 
-        <h2>--- Using console.log() ---</h2>
+        <h2>Using console.log()</h2>
         <p>- For debugging purposes, you can call the console.log() method in the browser to display data<br />
         - Example</p>
-        <p>My First Paragraph</p>
-        <code>
-            <script>
-                console.log(1+2);
-            </script>
-        </code>
+        <div id="frame">
+            <div id="cards">
+                <h3>Example</h3>
+                <div id="content">
+                    <p>Check the console for data</p>
+                    <script>
+                        console.log('Hey, I just loaded by console.log()!');
+                    </script>
+                </div>
+            </div>
+            <div id="cards">
+                <h3>Code</h3>
+                <div id="content">
+                    <code>
+                        <h4>HTML Code</h4>
+                        &lt;p&gt;Check the console for data&lt;p&gt;
+                        <h4>JavaScript Code</h4>
+                        &lt;script&gt;<br />
+                            console.log('Hey, I just loaded by console.log()!');<br />
+                        &lt;/script&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript file linked -->
+        <script src="./02_output.js"></script>
+
     </body>
 </html>
