@@ -1,0 +1,84 @@
+/* Designing the file a little bit */
+body {
+    background-color: #ffffff;
+    color: #3a3a3a;
+    margin: 12px 22px;
+    padding-left: 22px;
+}
+
+h1 {
+    text-align: center;
+    margin: 8px 0 16px 0;
+}
+
+p, ul li { 
+    font-family: Verdana;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+ul {
+    margin-left: 24px;
+}
+
+p span {
+    color: red;
+}
+
+button {
+    display: inline-flex;
+    height: 40px;
+    margin-top: 12px;
+    padding: 0;
+    background-color: #009758;
+    border: none;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500px;
+    cursor: pointer;
+}
+
+.button-text {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+    color: #fff;
+    height: 100%;
+}
+
+button:hover {
+    background-color: #008168;
+}
+
+button:active {
+    background-color: #006E58;
+}
+
+#frame {
+    margin: 12px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#cards {
+    width: 500px;
+    border-top: 44px solid #E7E9EB;
+    border-right: 22px solid #E7E9EB;
+    border-bottom: 44px solid #E7E9EB;
+    border-left: 22px solid #E7E9EB;
+}
+
+#cards h3 {
+    margin-top: -34px;
+}
+
+#content {
+    margin: 12px 6px 6px 6px;
+}
+
+#cards h4 {
+    text-align: center;
+}
