@@ -2,115 +2,8 @@
 <html>
     <head>
         <title>JavaScript Basic understanding</title>
-        <style>
-
-            /* Removing default styling */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            /* Designing the file a little bit */
-            body {
-                background-color: #ffffff;
-                color: #3a3a3a;
-                margin: 12px 22px;
-                padding-left: 22px;
-            }
-
-            h1 {
-                text-align: center;
-                margin: 8px 0 16px 0;
-            }
-    
-            h1 {
-                font-family: "Segoe UI", Arial, sans-serif;
-                font-size: 42px;
-                font-weight: 400px;
-                line-height: 63px;
-            }
-
-            h2 {
-                font-family: "Segoe UI", Arial, sans-serif;
-                font-size: 32px;
-                font-weight: 400px;
-                line-height: 48px;
-            }
-
-            h3 {
-                font-family: "Segoe UI", Arial, sans-serif;
-                font-size: 24px;
-                font-weight: 400px;
-                line-height: 36px;
-            }
-
-            p, ul li { 
-                font-family: Verdana;
-                font-size: 15px;
-                line-height: 23px;
-            }
-
-            ul {
-                margin-left: 24px;
-            }
-
-            p span {
-                color: red;
-            }
-
-            button {
-                display: inline-flex;
-                height: 40px;
-                margin-top: 12px;
-                padding: 0;
-                background-color: #009758;
-                border: none;
-                outline: none;
-                font-family: 'Quicksand', sans-serif;
-                border-radius: 5px;
-                overflow: hidden;
-                font-size: 16px;
-                font-weight: 500px;
-                cursor: pointer;
-            }
-
-            .button_text {
-                display: inline-flex;
-                align-items: center;
-                padding: 0 12px;
-                color: #fff;
-                height: 100%;
-            }
-
-            button:hover {
-                background-color: #008168;
-            }
-
-            button:active {
-                background-color: #006E58;
-            }
-
-            .frame {
-                border: 2px solid red;
-                margin: 12px 0;
-                display: flex;
-                justify-content: space-around;
-            }
-            
-            #cards {
-                width: 400px;
-                border-top: 44px solid #E7E9EB;
-                border-right: 22px solid #E7E9EB;
-                border-bottom: 44px solid #E7E9EB;
-                border-left: 22px solid #E7E9EB;
-            }
-
-            #cards h3 {
-                margin-top: -44px;
-            }
-
-        </style>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="style.css" />
         <!-- Js script placed in the head -->
         <!-- <script>
             function myFunction() {
@@ -138,37 +31,47 @@
             <li>You can place an external script reference in &lt;head&gt; or &lt;body&gt; as you like.<br />
                 The script will behave as if it was located exactly where the &lt;script&gt; tag is located.</li>
         </ul>
-        <div class="frame">
+        <div id="frame">
             <div id="cards">
                 <h3>Example</h3>
-                <p id="demo">I am a Paragraph</p>
-                <button type="button" onclick="myFunction()">
-                    <span class="button_text">Download</span>
-                </button>
+                <div id="content">
+                    <p id="trial">I am a Paragraph</p>
+                    <button type="button" onclick="myFunction()">
+                        <span class="button-text">Click Me!</span>
+                    </button>
+                    <!-- Here JavaScript code will load from external file  -->
+                </div>
             </div>
             <div id="cards">
                 <h3>Code</h3>
-                <pre>
+                <div id="content">
                     <code>
-                        &lt;p id="demo">I am a Paragraph&lt;/p&gt;
-                        &lt;button type="button" onclick="myFunction()"&gt;
-                            &lt;span class="button_text"&gt;Download&lt;/span&gt;
+                        <h4>HTML Code</h4>
+                        &lt;p id="trial">I am a Paragraph&lt;/p&gt;<br />
+                        &lt;button type="button" onclick="myFunction()"&gt;<br />
+                            &lt;span class="button-text"&gt;Click Me!&lt;/span&gt;<br />
                         &lt;/button&gt;
+                        <h4>JavaScript Code</h4>
+                        &lt;script&gt;<br />
+                        function myFunction() {<br />
+                            document.getElementById("trial").innerHTML = "I got changed.";<br />
+                          }<br />
+                        &lt;/script&gt;
                     </code>
-                </pre>
+                </div>
             </div>
         </div>
-        <p class="bottom"><span>Note!</span> Placing scripts at the bottom of the &lt;body&gt; element improves the display speed,<br />
-            because script interpretation slows down the display.</p>
+        <p><span>Note!</span> Placing scripts at the bottom of the &lt;body&gt; element improves the display speed,<br />
+        because script interpretation slows down the display.</p>
 
         <!-- JS script placed in the body -->
-        <script>
+        <!-- <script>
             function myFunction() {
-              document.getElementById("demo").innerHTML = "I got changed.";
+              document.getElementById("trial").innerHTML = "I got changed.";
             }
-        </script>
+        </script> -->
         
         <!-- External file -->
-        <!-- <script src="01_home.js"></script> --> 
+        <script src="01_home.js"></script> 
     </body>
 </html>
