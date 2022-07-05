@@ -1,3 +1,3 @@
 function myFunction() {
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
+    document.getElementById("trial").innerHTML = "Paragraph changed.";
   }
