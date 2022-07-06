@@ -2,120 +2,246 @@
 <html lang="en">
     <head>
         <title>JavaScript Arrays</title>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <h1>JavaScript Arrays</h1>
         <p>Arrays are special type of object which stores a list of data</p>
-        <pre>
-            <code>
-                var person = ['Rasheed Ahmad', 25, 'Charsadda']
-                console.log(person[0]);
-                console.log(person[2]);
-                console.log(typeof(person));
+        <code>
+            var person = ['Rasheed Ahmad', 26, 'Peshawar']<br />
+            console.log(person);<br />
+        </code>
+        <samp>
+            Output: ['Rasheed Ahmad', 26, 'Peshawar']
+        </samp>
 
-                //Update a value 
-                console.log(person);
-                person[1] = 26;
-                console.log(person);
+        <p>Arrays are zero indexed, means that the first element resides at person[0] and so on</p>
+        <samp>
+            person[0] --> 'Rasheed Ahmad'<br />
+            person[1] --> 26<br />
+            person[2] --> 'Peshawar'
+        </samp>
 
-                //Add new value at the end of the Array
-                person[person.length] = 'Lovely';
-                console.log(person);
-                //OR by using an in-built function to an element at the end of the Array
-                person.push('Mera');
-                console.log(person);
+        <p>Check the type of the array</p>
+        <code>
+            console.log(typeof(person));<br />
+        </code>
+        <samp>
+            Output: object
+        </samp>
 
-                //Print length of the Array
-                console.log(person.length);
+        <p>Update an existing value say 'second value'</p>
+        <code>
+            person[1] = 25;<br />
+            console.log(person[1]);<br />
+        </code>
+        <samp>
+            Output: 25
+        </samp>
 
-                //Remove last element of the Array
-                person.pop();
-                console.log(person);
+        <p>Add new value at the end of the Array</p>
+        <code>
+            person[person.length] = 'Engineer';<br />
+            console.log(person);<br />
+        </code>
+        <samp>
+            Output: ['Rasheed Ahmad', 25, 'Peshawar', 'Engineer']
+        </samp>
 
-                //Add or Remove a value at a specific location
-                person.splice(2,1,'Nice Person');
-                console.log(person);
-                //Parameters: 
-                //First - starting position
-                //Second - how many items to be deleted
-                //Third - and the items to be added
+        <p>OR adding with a built-in function</p>
+        <code>
+            person.push('Software');<br />
+            console.log(person);<br />
+        </code>
+        <samp>
+            Output: ['Rasheed Ahmad', 25, 'Peshawar', 'Engineer', 'Software']
+        </samp>
 
-                //Deleting a specific element
-                person.splice(2,1);
-                console.log(person);
+        <p>Remove last element of the Array</p>
+        <code>
+            person.pop();<br />
+            console.log(person);<br />
+        </code>
+        <samp>
+            Output: ['Rasheed Ahmad', 25, 'Peshawar', 'Engineer']
+        </samp>
 
-                //Concatination
-                fruits = ['Apple', 'Orange', 'Mango'];
-                var newData = person.concat(fruits);
-                console.log(newData);
+        <p>Add or Remove a value at a specific location</p>
+        <code>
+            person.splice(2, 1, 'Nice Person');<br />
+            console.log(person);<br />
+        </code>
+        <samp>
+            Output: ['Rasheed Ahmad', 25, 'Nice Person', 'Engineer']
+        </samp>
+        <p>Parameters:<br />
+            - First - starting position<br />
+            - Second - how many items to be deleted<br />
+            - Third - add element</p>
 
-                //Sorting Ascending and Descending
-                newData.sort(); //Ascending order
-                console.log(newData);
+        <p>Delete a specific element</p>
+        <code>
+            person.splice(2, 1);<br />
+            console.log(person);<br />
+        </code>
+        <samp>
+            Output: ['Rasheed Ahmad', 25, 'Engineer']
+        </samp>
+        <p>Parameters:<br />
+            - First - starting position<br />
+            - Second - how many items to be deleted</p>
 
-                newData.reverse(); //Descending order
-                console.log(newData);
-            </code>
-        </pre>
-        <h2>Array Methods</h2>
-        <h3>filter() method:</h3>
-        <script>
-            const items = [
-                { name: 'Bike', price: 200 },  
-                { name: 'Phone', price: 150 },  
-                { name: 'TV', price: 202 },  
-                { name: 'Movie', price: 10 },  
-                { name: 'Cycle', price: 140 },  
-                { name: 'Computer', price: 180 },  
-                { name: 'Mouse', price: 20 }
-            ]
-            // filter(): Fileter those items whose price is less than or equal to 100 dollars
-            const filteredItems = items.filter( (item) => {
-                return item.price <= 100;
-            });
-            console.log(filteredItems);
+        <p>Check length of the array</p>
+        <code>
+            console.log(person.length);<br />
+        </code>
+        <samp>
+            Output: 5
+        </samp>
 
-            // map(): Convert the array into a new array
-            const mapedItems = items.map( (item) => {
-                return item.name;
-            });
-            console.log(mapedItems);
+        <p>Concatination: Concatinating two arrays</p>
+        <code>
+            Languages = ['JavaScript', 'React', 'Node.js'];<br />
+            var newData = person.concat(Languages);<br />
+            console.log(newData);<br />
+        </code>
+        <samp>
+            Output: ['Rasheed Ahmad', 25, 'Engineer', 'JavaScript', 'React', 'Node.js']
+        </samp>
 
-            // find(): Find the 'Cycle' in the array
-            const foundItem = items.find( (item) => {
-                return item.name === 'Cycle';
-            });
-            console.log(foundItem);
+        <p>Sorting Ascending and Descending</p>
+        <code>
+            newData.sort();    // Ascending order<br />
+            newData.reverse(); // Descending order<br />
+        </code>
+        <samp>
+            Output:<br />
+            [25, 'Engineer', 'JavaScript', 'Node.js', 'Rasheed Ahmad', 'React']<br />
+            ['React', 'Rasheed Ahmad', 'Node.js', 'JavaScript', 'Engineer', 25]
+        </samp>
 
-            // forEach(): Looping easily by avoiding the clunky long for loops
-            items.forEach( (item) => {
-                console.log(item.price);
-            });
+        <h2>Some Useful Array Methods</h2>
+        <code>
+            const items = [<br />
+                { name: 'Bike', price: 200 },<br />  
+                { name: 'Phone', price: 150 },<br />  
+                { name: 'TV', price: 202 },<br />  
+                { name: 'Movie', price: 10 },<br />  
+                { name: 'Cycle', price: 140 },<br />  
+                { name: 'Computer', price: 180 },<br />  
+                { name: 'Mouse', price: 20 }<br />
+            ]<br />
+        </code>
 
-            // some(): Check if anything in an array returns true of false
-            // i.e If the array has inexpensive items return true else return false
-            const inexpensiveItems = items.some( (item) => {
-                return item.price <= 50;
-            });
-            console.log(inexpensiveItems);
+        <h3>filter(): Filetering Data</h3>
+        <p>Fileter those items whose price is less than or equal to 100 dollars</p>
+        <code>
+            const filterdItems = items.filter( (item) => {<br />
+                return item.price &lt;= 100;<br />
+            });<br />
+            console.log(filterdItems);<br />
+        </code>
+        <samp>
+            Output: [<br />
+                        {name: 'Movie', price: 10},<br />
+                        {name: 'Mouse', price: 20}<br />
+                    ]<br />
+        </samp>
 
-            // every(): some() checks atleast one item false under the expression but
-            // every() checks each and every item should fall under the expression.
-            const everyItem = items.every( (item) => {
-                // return item.price <= 100;
-                return item.price <= 202;
-            });
-            console.log(everyItem); // I) Retuns false - because there are items greater than 100 dollars
-            // The second will retrun true - because every item is less than or equal to 202 dollars
+        <h3>map(): Mapping Data</h3>
+        <p>Convert the array into a new array</p>
+        <code>
+            const mapedItems = items.map( (item) => {<br />
+                return item.name;<br />
+            });<br />
+            console.log(mapedItems);<br />
+        </code>
+        <samp>
+            Output: ['Bike', 'Phone', 'TV', 'Movie', 'Cycle', 'Computer', 'Mouse']
+        </samp>
 
-            // includes(): Check if an array has the given item or not
-            const new_items = [1, 2, 3, 4];
-            const includedItem1 = new_items.includes(2);
-            const includedItem2 = new_items.includes(5);
-            console.log(includedItem1); // true
-            console.log(includedItem2); // false
+        <h3>find(): Finding an element</h3>
+        <p>Find the 'Cycle' in the array</p>
+        <code>
+            const foundItem = items.find( (item) => {<br />
+                return item.name === 'Cycle';<br />
+            });<br />
+            console.log(foundItem);<br />
+        </code>
+        <samp>
+            Output: {name: 'Cycle', price: 140}
+        </samp>
 
-            // reduce(): 
-        </script>
+        <h3>forEach(): Easy Looping</h3>
+        <p>Looping easily by avoiding the clunky long for loops</p>
+        <code>
+            items.forEach( (item) => {<br />
+                console.log(item.price);<br />
+            });<br />
+        </code>
+        <samp>
+            Output:<br /> 
+            200<br />
+            150<br />
+            202<br />
+            10<br />
+            140<br />
+            180<br />
+            20
+        </samp>
+
+        <h3>some(): Check if anything in an array returns true of false</h3>
+        <p>For example if the array has inexpensive items return true else return false</p>
+        <code>
+            const inexpensiveItems = items.some( (item) => {<br />
+                return item.price &lt;= 50;<br />
+            });<br />
+            console.log(inexpensiveItems);<br />
+        </code>
+        <samp>
+            Output: true
+            <p>Thus the array has atleast one item less than or equal to 50 dollars</p>
+        </samp>
+
+        <h3>every(): some() checks atleast one item false under the condition</h3>
+        <p>But every() checks each and every item should fall under the condition.</p>
+        <code>
+            const everyItem = items.every( (item) => {<br />
+                return item.price &lt;= 50;<br />
+                return item.price &lt;= 202;<br />
+            });<br />
+            console.log(everyItem);<br />
+        </code>
+        <samp>
+            Output: true<br />
+            <p>Returns 'false', because there are some items greater than 50 dollars</p>
+            <p>The second return statement returns 'true', because every item is less than or equal to 202 dollars</p>
+        </samp>
+
+        <h3>includes(): Check if an array has the given item or not</h3>
+        <code>
+            const numbers = [1, 2, 3, 4, 5];
+            const item1 = items.includes(2);
+            const item2 = items.includes(6);
+            console.log(item1);
+            console.log(item2);
+        </code>
+        <samp>
+            Output: true
+            <p>ture, because '2' is in the array</p>
+            <p>false, because there is no '6' in the array</p>
+        </samp>
+
+        <h3>reduce():</h3>
+        <code>
+            
+        </code>
+        <samp>
+            
+        </samp>
+
+        <!-- JavaScript file linked -->
+        <script src="./08_arrays.js"></script>
     </body>
 </html>

@@ -1,57 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Functions</title>
-</head>
-<body>
-    <h1>JavaScript Functions</h1>
-    <p>A JavaScript function is a block of code designed to perform a particular task.<br /> A JavaScript function is executed when "something" invokes it (calls it).</p>
-    <pre>
-        <h3>Function with two parameters</h3>
-        <code>
-            function total_sum(num1, num2) {
-                var sum = num1 + num2;
-                console.log(sum);
-              }
-              
-              total_sum(2, 3);
-        </code>
-        <samp>
-            5
-        </samp>
-        <h3>Function returning a value</h3>
-        <code>
-            //Function returning a value
-            function total_sum(num1, num2) {
-              var sum = num1 + num2;
-              return sum;
-            }
+    <head>
+        <title>JavaScript Functions</title>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>JavaScript Functions</h1>
+        <p>A JavaScript function is a block of code designed to perform a particular task.<br /> 
+        A JavaScript function is executed when "something" invokes it (calls it).</p>
 
-            var result = total_sum(5, 3);
-            console.log(result);
-        </code>
-        <samp>
-            8
-        </samp>
-        <h3>Scope and Environment</h3>
+        <h2>A simple function</h2>
+        <p>Use the keyword 'function' to declare a function.<br />
+        Use 'function' name with parenthesis to invoke it.</p>
         <code>
-            var num1 = 5; //global scope
-            function sum (a) {
-            var num2 = 2; //local to this function
-            var result = num1+num2+a;
-            console.log(result);
-            }
-
-            sum(5);
+            function printName() {<br />
+                console.log('Rasheed Ahmad');<br />
+            }<br />
+            printName();<br />
         </code>
         <samp>
-            12
+            Output: Rasheed Ahmad
         </samp>
-        <dl>
-        <dt>Hoisting</dt>
-        <dd>The mechanism of where variables and functions can be used before <br />
-            declaring then is called Hoisting. OR Hoisting is JavaScript's default behavior of moving declarations to the top.</dd>
-        </dl>
-    </pre>
-</body>
+
+        <h2>function with parameters</h2>
+        <p>Use variable name(s) in the parenthesis  as parameters<br />
+        and then pass values when you call a function as arguments.</p>
+        <code>
+            function addNumbers(a, b) {<br />
+                var sum = a + b;<br />
+                console.log(sum);<br />
+            }<br />
+            printName(2, 3);<br />
+        </code>
+        <samp>
+            Output: 5
+        </samp>
+
+        <h2>function returning a value</h2>
+        <p>Functions can also return a value, use the return keyword to return something.<br />
+        To use a return keyword, we have to store it in a variable to use it then.</p>
+        <code>
+            var result;<br />
+            function multiplyNumbers(a, b) {<br />
+                var multiply = a * b;<br />
+                return multiply;
+            }<br />
+            result = multiplyNumbers(2, 3);<br />
+            console.log(result);<br />
+        </code>
+        <samp>
+            Output: 6
+        </samp>
+
+        <h2>Scope and Environment</h2>
+        <p>Scope is the area where a variable can be used.<br />
+        There are global scope and local scope</p>
+        <code>
+            var num1 = 5; // global scope - can be used anywhere in the program<br />
+            function sum (a) {<br />
+            var num2 = 2; // local to this function - only this function can use it<br />
+            var result = num1 + num2 + a;<br />
+            console.log(result);<br />
+            }<br />
+            sum(5);<br />
+        </code>
+        <samp>
+            Output: 12
+        </samp>
+        <p>num1 is a global variable thus the function can use it,<br />
+        but num2 cannot be used outsite the function.</p>
+
+        <!-- External file -->
+      <script src="10_functions.js"></script>
+    </body>
 </html>

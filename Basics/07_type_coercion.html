@@ -2,11 +2,13 @@
 <html lang="en">
     <head>
         <title>Type Coercion</title>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <h1>Type Coercion</h1>
         <p>Conversion of data type from one to another is called Type Coercion</p>
-        <p>Have two types</p>
+        <p>Coercion have two types</p>
         <ul>
             <li>Imlicit Coercion: Run automatically by JavaScript</li>
             <li>Explicit Coercion: Done programatically by us</li>
@@ -19,22 +21,107 @@
         The <var> element defines a variable in programming or in a mathematical expression
         The <pre> element defines preformatted text -->
 
-        <h4> Imlicit Example:</h4>
-        <pre>
-            <code>
-                var numOne = 5;
-                var numTwo = "Hello";
-                var sum = numOne + numTwo;
-                console.log(sum);
-            </code>
-            <samp>
-                "Hello5"
-                The result is a string which is automatically done by JS depending upon the operation
-                Check its type - typeof(sum) - string
-            </samp>
-        </pre>
+        <h2>Imlicit Coercion Example:</h2>
+        <div id="frame">
+            <div id="cards">
+                <h3>Example</h3>
+                <div id="content">
+                    <p id="trial">Click the button to see the type of the result.</p>
+                    <code>
+                        var numOne = 5;<br />
+                        var numTwo = "Hello";<br />
+                        var sum = numOne + numTwo;<br />
+                    </code>
+                    <button type="button" onclick="loadCoercion()">
+                        <span class="button-text">Check Type!</span>
+                    </button>
+                    <!-- Here JavaScript code will load from external file  -->
+                    <p>Output:</p><samp id="output"></samp>
+                    <p>Type:</p><p id="type"></p>
+                    <p>Explanation:</p><p id="exp"></p>
+                </div>
+            </div>
+            <div id="cards">
+                <h3>Code</h3>
+                <div id="content">
+                    <code>
+                        <h4>HTML Code</h4>
+                        &lt;p id="trial">Click the button to see the type of the result.&lt;/p&gt;<br />
+                        &lt;button type="button" onclick="loadCoercion()"&gt;<br />
+                            &lt;span class="button-text"&gt;Check Type!&lt;/span&gt;<br />
+                        &lt;/button&gt;
+                        <h4>JavaScript Code</h4>
+                        &lt;script&gt;<br />
+                        var numOne = 5;<br />
+                        var numTwo = "Hello";<br />
+                        var sum = numOne + numTwo;<br />
+
+                        const info = "The result is 'String', because JS adds a number and string and the result is a string also";<br />
+
+                        function loadCoercion() {
+                            document.getElementById('output').innerHTML = sum;
+                            document.getElementById('type').innerHTML = typeof(sum);
+                            document.getElementById('exp').innerHTML = info;
+                        }<br />
+                        &lt;p&gt;Output:&lt;/p&gt;&lt;samp id="output"&gt;&lt;/samp&gt;<br />
+                        &lt;p&gt;Type:&lt;/p&gt;&lt;p id="type"&gt;&lt;/p&gt;<br />
+                        &lt;p&gt;Explanation:&lt;/p&gt;&lt;p id="exp"&gt;&lt;/p&gt;<br />
+                        &lt;/script&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+        <h2>Explicit Coercion Example:</h2>
+        <div id="frame">
+            <div id="cards">
+                <h3>Example</h3>
+                <div id="content">
+                    <p id="trial">Click the button to see the type of the result.</p>
+                    <code>
+                        var numOne = 5;<br />
+                        var numTwo = "Hello";<br />
+                        var sum = numOne + numTwo;<br />
+                    </code>
+                    <button type="button" onclick="loadCoercion()">
+                        <span class="button-text">Check Type!</span>
+                    </button>
+                    <!-- Here JavaScript code will load from external file  -->
+                    <p>Output:</p><samp id="output"></samp>
+                    <p>Type:</p><p id="type"></p>
+                    <p>Explanation:</p><p id="exp"></p>
+                </div>
+            </div>
+            <div id="cards">
+                <h3>Code</h3>
+                <div id="content">
+                    <code>
+                        <h4>HTML Code</h4>
+                        &lt;p id="trial">Click the button to see the type of the result.&lt;/p&gt;<br />
+                        &lt;button type="button" onclick="loadCoercion()"&gt;<br />
+                            &lt;span class="button-text"&gt;Check Type!&lt;/span&gt;<br />
+                        &lt;/button&gt;
+                        <h4>JavaScript Code</h4>
+                        &lt;script&gt;<br />
+                        var numOne = 5;<br />
+                        var numTwo = "Hello";<br />
+                        var sum = numOne + numTwo;<br />
+
+                        const info = "The result is 'String', because JS adds a number and string and the result is a string also";<br />
+
+                        function loadCoercion() {
+                            document.getElementById('output').innerHTML = sum;
+                            document.getElementById('type').innerHTML = typeof(sum);
+                            document.getElementById('exp').innerHTML = info;
+                        }<br />
+                        &lt;p&gt;Output:&lt;/p&gt;&lt;samp id="output"&gt;&lt;/samp&gt;<br />
+                        &lt;p&gt;Type:&lt;/p&gt;&lt;p id="type"&gt;&lt;/p&gt;<br />
+                        &lt;p&gt;Explanation:&lt;/p&gt;&lt;p id="exp"&gt;&lt;/p&gt;<br />
+                        &lt;/script&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
         
-        <h4>Explicit Example:</h4>
         <ul>
             <li>To Number: Number()</li>
             <li>To String: String()</li>
@@ -51,6 +138,8 @@
                 console.log(Number('Hello'), typeof(Number('Hello'))); --> NaN Number
             </code>
         </pre>
-        
+    
+        <!-- External JavaScript file -->
+        <script src="07_type_coercion.js"></script> 
     </body>
 </html>

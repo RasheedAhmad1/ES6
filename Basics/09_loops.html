@@ -2,53 +2,101 @@
 <html lang="en">
    <head>
       <title>JavaScript Loops</title>
+      <!-- Linking style sheet -->
+      <link rel="stylesheet" href="style.css" />
    </head>
    <body>
       <h1>JavaScript Loops</h1>
       <p>The repetition of code is called Loop and each repetition is called iteration.<br />
-         In another words, running the same lines of code for a certain number of times is c/d Loop.</p>
-      <p>JavaScript offers two types of Loops - While Loop and for Loop</p>
-      <p>When you know, how many times the Loop need to be iterate then you can use for Loop.</p>
-      <p>When you have to stop at a certain condition is reached, you can use while Loop.</p>
-      <pre>
-            <h2>while() Loop</h2>
-            <code>
-               //While the condition is true always execute the code block inside loop
-               var x = 1;
-               while(x&lt;=10) {
-               console.log(x);
-               x++;
-               }
-            </code>
-            <h2>for() Loop</h2>
-            <code>
-               //for loop
-               var numbers = [1, 2, 3, 4, 5];
-               var pos;
-               for(pos = 0; pos&lt;numbers.length; pos++) {
-               console.log('Position =&gt; ' +pos+ ' Value =&gt; ' + numbers[pos]);
-               }
-            </code>
-            <h3>Breaking for loop</h3>
-            <code>
-               var numbers = [1, 2, 3, 4, 5];
-               var pos;
-               for(pos = 0; pos&lt;numbers.length; pos++) {
-               if(pos == 3) break;
-               console.log('Position =&gt; ' +pos+ ' Value =&gt; ' + numbers[pos]);
-               }
-            </code>
-            <code>
-               //Skip a certain iteration to start the next iteration(continue keyword) 
-               //printing even numbers
-               var numbers = [1, 2, 3, 4, 5, 6];
-               var pos;
-               for(pos=0; pos&lt;numbers.length; pos++) {
-               if(pos%2==0) continue;
-               console.log(numbers[pos]);
-               }
-            </code>
-            <h2>forEach() Loop</h2>
-      </pre>
+      In another words, running the same lines of code for a certain number of times is c/d Loop.<br />
+      JavaScript offers many types of Loops - while loop, for loop and, forEach loop.</p>
+
+      <h2>while() Loop</h2>
+      <p>When you have to stop at a certain condition is reached, you can use while Loop then.</p>
+      <code>
+         var x = 1;<br />
+         while(x &lt;= 3) {<br />
+         console.log(x);<br />
+         x++;<br />
+         }<br />
+      </code>
+      <samp>
+         Output:<br />
+         1<br />
+         2<br />
+         3
+      </samp>
+      <p>While the condition is true always execute the code block inside loop</p>
+
+      <h2>for() Loop</h2>
+      <p>When you know, how many times the Loop need to iterate then you should use for Loop.</p>
+      <code>
+         var numbers = [1, 2, 3];<br />
+         var pos;<br />
+         for(pos = 0; pos&lt;numbers.length; pos++) {<br />
+         console.log('Position =&gt; ' +pos+ ' Value =&gt; ' + numbers[pos]);<br />
+      </code>
+      <samp>
+         Output:<br />
+         Position => 0 Value => 1<br />
+         Position => 1 Value => 2<br />
+         Position => 2 Value => 3<br />
+         Position => 3 Value => 4
+      </samp>
+      <p>Thus the loop iterates upto the length of the array</p>
+
+      <h2>forEach() Loop</h2>
+      <p>When you know, how many times the Loop need to iterate then you should use for Loop.</p>
+      <code>
+         var numbers = [1, 2, 3];<br />
+         var pos;<br />
+         forEach(pos = 0; pos&lt;numbers.length; pos++) {<br />
+         console.log('Position =&gt; ' +pos+ ' Value =&gt; ' + numbers[pos]);<br />
+      </code>
+      <samp>
+         Output:<br />
+         
+      </samp>
+      <p></p>
+
+      <h2>break keywork</h2>
+      <p></p>
+      <h3>Breaking for loop</h3>
+      <code>
+         var numbers = [1, 2, 3, 4, 5];<br />
+         var pos;<br />
+         for(pos = 0; pos &lt; numbers.length; pos++) {<br />
+            if(pos == 2) break;<br />
+            console.log('Position =&gt; ' +pos+ ' Value =&gt; ' + numbers[pos]);<br />
+         }<br />
+      </code>
+      <samp>
+         Output:<br />
+         Position => 0 Value => 1<br />
+         Position => 1 Value => 2
+      </samp>
+      <p>Thus 'break' terminates the loop where the given 'if' condition is met.</p>
+
+      <h2>continue keywork</h2>
+      <p>Skip a certain iteration to start the next iteration.</p>
+      <h3>Skipping for loop, printing even numbers.</h3>
+      <code>
+         var numbers = [1, 2, 3, 4, 5, 6];<br />
+         var pos;<br />
+         for(pos = 0; pos &lt; numbers.length; pos++) {<br />
+            if(pos%2==0) continue;<br />
+            console.log(numbers[pos]);<br />
+         }<br />
+      </code>
+      <samp>
+         Output:<br />
+         2<br />
+         4<br />
+         6
+      </samp>
+      <p>Thus the 'continue' keyword skips the iteration where the given 'if' condition is mets.</p>
+
+      <!-- External file -->
+      <script src="09_loops.js"></script>
    </body>
 </html>
