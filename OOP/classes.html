@@ -2,14 +2,17 @@
 <html lang="en">
     <head>
         <title>JavaScript Classes</title>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="../Basics/style.css" />
     </head>
     <body>
         <h1>JavaScript Classes</h1>
         <p>ECMAScript 2015, also known as ES6, introduced JavaScript Classes.<br />
         JavaScript Classes are templates for JavaScript Objects.</p>
+
         <h2>JavaScript Class Syntax</h2>
-        <p>Use the keyword <font color="#ff0000">class</font> to create a class.<br />
-        Always add a method named <font color="#ff0000">constructor()</font>:<br />
+        <p>Use the keyword class to create a class.<br />
+        Always add a method named constructor():<br />
         Example:</p>
         <pre>
             <code>
@@ -23,13 +26,15 @@
         </pre>
         <p>The example above creates a class named "Employee".<br />
         The class has two initial properties: "name" and "age".</p>
+
         <h2>Using a class</h2>
-        <p>When you have a class, you can use the class to create objects:<br />
+        <p>When you have a class, you can use the class to create its objects:<br />
         Example:</p>
         <code>let Employee1 = new Employee('Ali', 24);<br />
-              let Empoyee2 = new Employee('Ahmad' 25);</code>
-        <p>The example above uses the Car class to create two Car objects.<br />
+              let Employee2 = new Employee('Ahmad' 25);</code>
+        <p>The example above uses the 'Employee' class to create two objects.<br />
         The constructor method is called automatically when a new object is created.</p>
+
         <h2>The Constructor Method</h2>
         <p>The constructor method is a special method:</p>
         <ul>
@@ -38,6 +43,7 @@
             <li>It is used to initialize object properties</li>
         </ul>
         <p>If you do not define a constructor method, JavaScript will add an empty constructor method.</p>
+
         <h2>Class Methods</h2>
         <p>Create a Class method named "joining_date", that returns the employee "Joining Date":</p>
         <pre>
@@ -49,55 +55,65 @@
                         this.year = year;
                     }
 
+                    // User-defined method
                     joining_date() {
+                        let age = this.age;
+                        let name = this.name;
+
                         let date = new Date();
-                        return date.getFullYear() - this.year;
-                      }
+                        date = date.getFullYear() - this.year;
+                        return `Name: ${name} 
+                        Age: ${age} 
+                        Joining data: ${date}`;
+                    }
+
+                    // Static method: which can be used/invoked without an object
+                    static add(a, b) {
+                        return a + b;
+                    }
                 }
             </code>
         </pre>
-        <p>Now:</p>
+
+        <p>Now creating an object 'emp1' and invoking user-defined method</p>
         <code>
-            let emp1 = new Employee('Akram', 32);
-            console.log(emp1.joining_date());
+            let emp1 = new Employee('Akram', 32, 10);<br />
+            console.log(emp1.joining_date());<br />
         </code>
-        <script>
-            class Employee {
-                    constructor(givenName, givenAge, givenYears_of_service) {
-                        this.name = givenName;
-                        this.age = givenAge;
-                        this.year = givenYears_of_service;
-                    }
-
-                    joining_date() {
-                        let date = new Date();
-                        return date.getFullYear() - this.year;
-                      }
-                    
-                    // Static method: which can be used without an object
-                    static add(a, b) {
-                        return a*b;
-                    }
-                }
-
-            let emp1 = new Employee('Akram', 32, 10);
-            console.log(emp1.joining_date());
-
-            // Calling static method
-            console.log(Employee.add(2, 3));
-        </script>
+        <samp>
+            Output: Name: Akram<br />
+            Age: 32<br />
+            Joining data: 2012
+        </samp>
+        <p>Invoking 'static' method</p>
+        <code>
+            console.log(Employee.add(2, 3));<br />
+        </code>
+        <samp>
+            Output: 5
+        </samp>
 
         <h2>Inheritance</h2>
-        <script>
-            class Programmer extends Employee {
-                constructor(givenName, givenAge, givenYears_of_service, language) {
-                    super(givenName, givenAge, givenYears_of_service); // super() means to call the constructor of the parent class
-                    this.language = language;
+        <p>Uses to inherit a new class which have the parent class properties</p>
+        <pre>
+            <code>
+                class Programmer extends Employee {
+                    constructor(givenName, givenAge, givenYears_of_service, language) {
+                        // super() means to invoke all the constructors of the parent class
+                        super(givenName, givenAge, givenYears_of_service); // super() means to call the constructor of the parent class
+                        this.language = language;
+                    }
                 }
-            }
+        
+                let p1 = new Programmer('Ahad', 23, 4, 'JavaScript');
+                console.log(p1);
+            </code>
+        </pre>
+        <sam>
+            Output: Programmer {name: 'Ahad', age: 23, year: 4, language: 'JavaScript'}
+        </sam>
 
-            let p1 = new Programmer('Ahad', 23, 4, 'JavaScript');
-            console.log(p1);
-        </script>
+        <!-- External file -->
+        <script src="classes.js"></script>
     </body>
 </html>
