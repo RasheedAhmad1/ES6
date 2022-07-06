@@ -2,31 +2,33 @@
 <html lang="en">
 <head>
     <title>JavaScript Objects</title>
+    <!-- Linking style sheet -->
+    <link rel="stylesheet" href="../Basics/style.css" />
 </head>
-<body>
-    <h1>JavaScript Objects</h1>
-    <pre>
-        <code>
-            const car = {
-                name: 'BMW',
-                color: 'White',
-                manufacturer: {
-                  name: 'Dallas',
-                  location: 'United States of America'
-                }, 
-                topSpeed: 450,
-                applyBreaks: function() {
-                  setTimeout(function() {
-                    console.log('Car Stopped!');
-                  }, 5000)
-                 }
+  <body>
+      <h1>JavaScript Objects</h1>
+      <pre>
+          <code>
+              const car = {
+                  name: 'BMW',
+                  color: 'White',
+                  manufacturer: {
+                    name: 'Dallas',
+                    location: 'United States of America'
+                  }, 
+                  topSpeed: 450,
+                  applyBreaks: function() {
+                    setTimeout(function() {
+                      console.log('Car Stopped!');
+                    }, 5000)
+                  }
                 }
-              
-              console.log(car.name);
-              console.log(car.manufacturer.location);
-              console.log(car.topSpeed);
-              console.log(car.applyBreaks());
-        </code>
-    </pre>
-</body>
+                
+                console.log(car.name);
+                console.log(car.manufacturer.location);
+                console.log(car.topSpeed);
+                console.log(car.applyBreaks());
+          </code>
+      </pre>
+  </body>
 </html>
