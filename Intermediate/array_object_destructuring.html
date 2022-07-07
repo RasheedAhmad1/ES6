@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Array and Object Destructuring</title>
+        <title>JavaScript Objects</title>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="../Basics/style.css" />
+    </head>
+    <body>
+        <h1>Array  and Object Destructuring</h1>
+        <p>Destructuring is a JavaScript expression that makes it possible to unpack values from arrays,<br />
+        or properties from objects, into distinct variables.<br />
+        That is, we can extract data from arrays and objects and assign them to variables</p>
+
+        <h2>Array Destructuring</h2>
+        <p>Use square brackets around variable names to store the values</p>
+        <pre>
+            <code>
+                const alphabets = ['A', 'B', 'C', 'D', 'E', 'F']; <br />
+                // Array destructuring <br />
+                const [a, b] = alphabets; <br />
+                console.log(a); <br />
+                console.log(b); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            A <br />
+            B 
+        </sam>
+
+        <h2>Skipping a value</h2>
+        <p>To skip a value just leave the 'name' of the variable empty</p>
+        <pre>
+            <code>
+                const alphabets = ['A', 'B', 'C', 'D', 'E', 'F']; <br />
+                // Skipping second element <br />
+                const [aa, , cc] = alphabets; <br />
+                console.log(aa); <br />
+                console.log(cc); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            A <br />
+            C 
+        </sam>
+        <p>In the code you can see that we leaved the second variable name empty<br />
+        thus the second element will be skipped.</p>
+
+        <h2>The rest elements</h2>
+        <p>What about the rest elements, that is where 'spread operator' comes<br />
+        into play.</p>
+        <pre>
+            <code>
+                const alphabets = ['A', 'B', 'C', 'D', 'E', 'F']; <br />
+                // rest operator (...) <br />
+                const [aaa, bbb, ...rest] = alphabets; <br />
+                console.log(aaa); <br />
+                console.log(bbb); <br />
+                console.log(rest); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            A <br />
+            C <br />
+            ['C', 'D', 'E', 'F']
+        </sam>
+        <p>In the code I used rest operator (...) to assign the residual values to rest variable.</p>
+
+        <h2>Function returning more than one value</h2>
+        <p>With the help of destructuring, a function can return more than one value at a time.<br />
+        into play.</p>
+        <pre>
+            <code>
+                // Function returning multiple values <br />
+                function sumAndMultiply (a, b) { <br />
+                    return [a+b, a*b]; <br />
+                } <br />
+                const [sum, multiply] = sumAndMultiply(2, 3); <br />
+                console.log(`Sum is: ${sum}, and Multiplication is: ${multiply}`); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            Sum is: 5, and Multiplication is: 6
+        </sam>
+
+        <h2>Object Destructuring</h2>
+        <p>Use curly braces around key names to store the values.<br />
+        'Array destructuring' is position based,
+        while 'Object destructuring' is based on the names of the keys.</p>
+        <pre>
+            <code>
+                const Employee = { <br />
+                    name: 'Sara', <br />
+                    age: 22, <br />
+                    DOB: '23/03/1996', <br />
+                    address: { <br />
+                        city: 'Peshawar', <br />
+                        state: 'KP' <br />
+                    } <br />
+                } <br />
+                // Object destructuring <br />
+                let [name, age] = Employee; <br />
+                console.log(`Name is: ${name} and Age is: ${age}); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            Name is: Sara and Age is: 22
+        </sam>
+
+        <h2>Using different key names</h2>
+        <p>To use a different  key name then --> name: FirstName</p>
+        <pre>
+            <code>
+                const Employee = { <br />
+                    name: 'Sara', <br />
+                    age: 22, <br />
+                    DOB: '23/03/1996', <br />
+                    address: { <br />
+                        city: 'Peshawar', <br />
+                        state: 'KP' <br />
+                    } <br />
+                } <br />
+                // Object destructuring <br />
+                let [name: firstName, age] = Employee; <br />
+                console.log(`Name is: ${firstName} and Age is: ${age}); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            Name is: Sara
+        </sam>
+
+        <h2>Destructuring nested objects</h2>
+        <p>To use a different  key name then --> name: FirstName</p>
+        <pre>
+            <code>
+                const Employee = { <br />
+                    name: 'Sara', <br />
+                    age: 22, <br />
+                    DOB: '23/03/1996', <br />
+                    address: { <br />
+                        city: 'Peshawar', <br />
+                        state: 'KP' <br />
+                    } <br />
+                } <br />
+
+                const {DOB, address: {city, state}} = Employee; <br />
+                console.log(DOB, city, state); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            23/03/1996 Peshawar KP
+        </sam>
+
+        <!-- External file -->
+        <script src="destructuring.js"></script>
+    </body>
+</html>
