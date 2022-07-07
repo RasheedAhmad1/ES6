@@ -1,7 +1,7 @@
-# ES6
-All about modern Javascript  
+# JavaScript
+All about basics to modern Javascript 
 
-# Basic and Advanced - Javascript
+# Basic to Advanced - Javascript
 Javascript As Fast As Possible
 Basics and some advanced stuff to learn Javascript
 
