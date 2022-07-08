@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTTP Requests</title>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="../Basics/style.css" />
+    </head>
+    <body>
+        <h1>HTTP Requests</h1>
+        <p>HTTP stands for Hypertext Transfer Protocol. The requests to backend are<br />
+        sent using HTTP. It is the protocol which allows the fetching of data from the<br />
+        server. It is the foundation of any data exchange on the web.</p>
+        <p>Clients and Servers communicates by exchanging individual messages.<br />
+        The messages sent by the client are requests, while the answer recieved from<br />
+        the server is called response.</p>
+
+        <h2>HTTP Methods</h2>
+        <p><b>GET</b> - It is used to get some data from the backend. The data can be<br />
+        a JSON Object or JSON Array.</p>
+        <p><b>POST</b> - It is used to create new data entries on the backend<br />
+        It accepts some data in the request and takes that data to the backend for creation.</p>
+        <p><b>PUT</b> - It is used to updata an existing data entry on the backend<br />
+        It accepts some data in the request and takes that data to the backend for updation.</p>
+        <p><b>DELETE</b> - It is used to delete an existing data entry on the backend.</p>
+
+        <h2>GET Request</h2>
+        <p><b>Request Method: GET</b><br />
+        It tells that the request needs to return some data</p>
+        <p><b>URL:</b> "https//:rasheedjan.com/todos"<br />
+        The complete URL for the HTTP call.</p>
+        <p><b>Backend URL:</b> "https//:rasheedjan.com"<br />
+        It points to the backend server</p>
+        <p><b>TODO endpoint:</b> "/todos"<br />
+        It tells the backend what is requested by the frontend.</p>
+
+        <h2>Response Codes</h2>
+        <p><b>When a search engine or website visitor makes a request to a web server,<br />
+        a three digit HTTP Response Status Code is returned.</b> This code indicates what is about to happen.</p>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>OK</td>
+                <td>The request was successfully completed.</td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>Created</td>
+                <td>A new resource was successfully created.</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>Bad Request</td>
+                <td>The request was invalid.</td>
+            </tr>
+            <tr>
+                <td>401</td>
+                <td>Unauthorized</td>
+                <td>The request did not include an authentication token or the authentication token was expired.</td>
+            </tr>
+            <tr>
+                <td>403</td>
+                <td>Forbidden</td>
+                <td>The client did not have permission to access the requested resource.</td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>Not Found</td>
+                <td>The requested resource was not found.</td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>Internal Server Error</td>
+                <td>The request was not completed due to an internal error on the server side.</td>
+            </tr>
+        </table>
+
+        <h2>Introduction to JSON</h2>
+        <p>JSON - Stands for JavaScript Object Notation.</p>
+        <p>It is basically a text format that makes it easy to share data b/w clients and servers.<br />
+        Its origin is based on how JavaScript object works so that's why look like a JS object.</p>
+        <p>Is is widly used accross many languages like C, Ruby, PHP, Python.</p>
+
+        <p>The biggest benefit of JSON is that it can be convrted into strings an vice versa.</p>
+        <pre>
+            <code>
+                var Items = [
+                    {
+                        'name': 'Laptop',
+                        'color': 'White',
+                        'price': 250,
+                        'location': 'Texas'
+                    },
+                    {
+                        'name': 'Desktop',
+                        'color': 'Black',
+                        'price': 220,
+                        'location': 'California'
+                    },
+                    {
+                        'name': 'Palmtop',
+                        'color': 'Gray',
+                        'price': 200,
+                        'location': 'Dallas'
+                    }
+                ]
+                // First object
+                console.log(Items[0]); 
+                // First object 'location' property
+                console.log(Items[0].location);
+            </code>
+        </pre>
+
+        <h2>Introduction to AJAX</h2>
+        <p>AJAX Stands for Asynchronous JavaScript And XML.<br />
+        It allows web pages to be updated Asynchronously by exchanging data with the backend.<br />
+        This makes it possible to be update parts of a web page, without reloading the whole page</p>
+
+        <h2>Asynchronous Code</h2>
+        <p>Normally JavaScript code executes line by line, say there is a line which takes 5 seconds<br />
+        to execute, then JavaScript will have to wait to move on and execute the next line.</p>
+        <p>So to avoid it there is a way to execute specific part of the code on the background,<br />
+        while the rest of the code executes normally. Running code on the background is known as<br />
+        Asynchronous Execution.</p>
+
+        <h2>XMLHttpRequest Object</h2>
+        <p>AJAX uses a browser built-in XMLHttpRequest object to make request to the backend server.<br />
+        This gave a simple and standard way to make HTTP request from JavaScript to get connect <br />
+        and update the HTML page.</p>
+        <h3>Sending a request:</h3>
+        <pre>
+            <code>
+                // Making an HTTP request
+                function getTODO() {
+                    let http = new XMLHttpRequest(); // Making a request object
+                    let url = 'https://jsonplaceholder.typicode.com/todos'; // Requesting URL
+
+                    // Open a request
+                    http.open('GET', url, true);
+
+                    // Send the request
+                    http.send();
+                }
+
+                // calling the function to get work done
+                getTODO();
+            </code>
+        </pre>
+        <h3>Handling HTTP Response</h3>
+        <p>This object give us access to a property called 'readyState' which holds the<br />
+        status of the XMLHttpRequest.<br />
+        Available statuses for the request.<br />
+        - <b>UNSENT: </b>It means that the request is initialized but 'open()' is not called yet.<br />
+        It is represented by '0'.<br />
+        - <b>OPENED: </b>It means that 'open()' has been called. Represented by '1'.<br />
+        - <b>HEADER RECIEVED: </b>It means that 'send()' has been called. Represented by '2'.<br />
+        - <b>LOADING: </b>It means that the request is being processed. Represented by '3'.<br />
+        - <b>DONE: </b>It means that the request is completed and the response is ready. Represented by '4'.</p>
+        <h3>The "onreadystatechange" property</h3>
+        <p>The object give access to 'onreadystatechange', which defines a function to be executed<br />
+        when the 'readyState' changes.</p>
+        <pre>
+            <code>
+                http.onreadystatechange = function() {
+                    if(this.readyState === 4) {
+                        console.log('Response recieved');
+                    }
+                }
+            </code>
+        </pre>
+        <p>To access the actual 'data' of the response, use 'responseText' property.</p>
+        <code>
+            http.responseText;
+        </code>
+        <p>Now to parse the data to the JSON format use 'JSON.parse' method.</p>
+        <code>
+            JSON.parse(http.responseText);
+        </code>
+        <h3>Handling Error</h3>
+        <p>Use another property 'status' to access the status codes of the response.</p>
+        <code>
+            if(this.status === 200) {
+                console.log(JSON.parse(http.responseText));
+            } else {
+                console.log('Call failed!');
+            }
+        </code>
+
+        <h2>Parsing JSON to HTML element</h2>
+        <code>
+            var response = JSON.parse(http.responseText);
+            response['something'].keyName;
+        </code>
+
+        <!-- Linking external JS files -->
+        <script src="./json.js"></script>
+        <script src="./ajax.js"></script>
+        <!-- <script src="./"></script> -->
+    </body>
+</html>
