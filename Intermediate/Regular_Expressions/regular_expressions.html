@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Regular Expressions</title>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="../../Basics/style.css" />
+    </head>
+    <body>
+        <h1>Regular Expressions</h1>
+        <p>A regular expression is an object that describes a pattern of charctors.<br />
+        It allows us to search for specific patterns of text using the difined pattern.</p>
+        <ul>
+            For example:
+            <li>To check whether a given string is a correct email address or not</li>
+            <li>To check that an entered username only contains alphabets and numbers or not</li>
+        </ul>
+        <h2>Syntax</h2>
+        <p><b>/pattern-string/flags</b><br />
+        <b>pattern-string</b> is where you define what strings this pattern should match.<br />
+        <b>forward slashes</b> represents the start and end of pattern-string.<br />
+        <b>flags</b> are used to difine whether you want to search to be case-sensitive or case-insensitive,<br />
+        or whether you want just the first result, or all the results.</p>
+        <p>Examples:</p>
+        <ul>
+            <li>/something/ -- findout something word, by default reg. exp. returns the first mathched result.</li>
+            <li>/something/g -- if there are multiple words, then return all words. 'g' means global (all)</li>
+            <li>/something/i -- if there are all caps, then return all. 'i' means case-insensitive.</li>
+            <li>/something/gi -- return case-insensitive and global results.</li>
+        </ul>
+        
+        <h2>Sets and Ranges</h2>
+        <p>Sets and ranges are represented by several charactors inside square brackets [...].<br />
+        This means that findout any charactor among given values.<br />
+        It has two variations:<br />
+        /something/ -- find something in the String
+       /something/g -- by default JS returns the first word matches, but if we want to return multiple strings the use 'g' flag for globalThis
+        /something/i -- 'i' for case-insensitive, to return all caps
+        [ABC] - It means any of the given three chartors, it is a set.<br />
+        Example: <br />
+        String: Air Brim Circle<br />
+        Pattern: [ABC]irm<br />
+        Output: Birm</p>
+        <p>Squar bracktes may also contain charactors range.<br />
+        [A-Z] is a charactor in range from A to Z.<br />
+        [0-9] is a digit from 0 to 9.<br />
+        Example:<br />
+        String: Same Name Fame Glam<br />
+        Pattern: [A-Z]ame<br />
+        Output: Same Name Fame</p>
+
+        <h2>Charactor Class</h2>
+        <p>\d ([0-9]): select all numbers.<br />
+        \D (negation of samll 'd') all charactors other than numbers.<br />
+        ^ : (carrot/cap sign) other than -- [^0-9] --> will select all charators other than these numbers.<br />
+        \w ([a-zA-Z0-9]): all charactors (allcaps) and numbers.<br />
+        \W (negation of small 'w'): select all special charactors and spaces.<br />
+        \s : select all the spaces.<br />
+        \S (negation of small 's'): select everythin except spaces.</p>
+
+        <h2>Regex Quantifiers</h2>
+        <p>Sets and Ranges selects a value single time, but 'Quantifiers' are selecting a value<br />
+        multiple times.<br />
+        Syntax: Add a value in curly braces after sets and ranges.<br />
+        All numbers with three digits only<br />
+        Example: <br />
+        String: He is born in 1996 and now 26 years old.<br />
+        Pattern: [0-9]{2}<br />
+        Output: 19 96 26<br />
+        Can use a range of quantifiers also<br />
+        [0-9]{2, 3} --> select from two to four numbers<br />
+        Output: 1996 28<br />
+        {0, } = * --> zero and onwards<br />
+        {0, 1} = ? --> either zero or 1<br />
+        . ([.]): Everything<br />
+        + ([\d]+): Either 1 or more --> Return all numbers proceding all. Without '+' it will return an array of numbers but with '+' it returns a string.</p>
+
+        <p>Tasks: Select only the hased color codes.<br />
+        String: color: #123456, background-color: #AB12C8, forground-color: #ADEFCB<br />
+        Pattern: #[a-zA-Z0-9]{6} or #[\w]{6}<br />
+        ^(\+92)?[\d]{7}$: 92 is optional here<br />
+        URL pattern: /www\.[\w]+\.(com|co|org|in)$/g</p>
+
+        <h2>Start and End conditions</h2>
+        <p>^ : start  (put at the begging)<br />
+        $ : end with<br />
+        Example1: ^#[\w]{6}$ - #ADEFCB --> matched<br />
+        Example2: ^#[\w]{6}$ - #ADEFCB1234 --> no match</p>
+
+        <h2>Regular Expressions using JS built-in functions</h2>
+        <ol>
+            <li>str.search(pattern): Returns the position of the first match.</li>
+            <li>pattern.test(str): Returns true if there is a match and false if no match.</li>
+            <li>str.match(pattern): Returns the matched string. without 'g' returns a single match and with 'g' returns multiple matches.</li>
+        </ol>
+        
+        <!-- Linking external JS file -->
+        <script src="./regular_expressions.js"></script>
+    </body>
+</html>
