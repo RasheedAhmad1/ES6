@@ -8,7 +8,6 @@
 // }).catch( (message) => {
 //     console.log(`This is in the catch ${message}`);
 // });
-
 // catchImage()
 
 // The above task with async and await
