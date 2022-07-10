@@ -1,5 +1,5 @@
 // Define a constant variable
-// export const name = 'Rasheed Jan';
+export const name = 'Rasheed Jan';
 
 // Define a function to 'Add' two numbers
 export function addNumbers(a, b) {
