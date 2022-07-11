@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>DOM Elements</title>
-</head>
-<body>
-    <h1>JavaScript HTML DOM Elements</h1>
-    <p>This page teaches you how to find and access HTML elements in an HTML page.</p>
-    <h2>Finding HTML Elements</h2>
-    <p>Often, with JavaScript, you want to manipulate HTML elements.<br />
-    To do so, you have to find the elements first. There are several ways to do this:</p>
-    <ul>
-        <li>Finding HTML elements by id</li>
-        <li>Finding HTML elements by tag name</li>
-        <li>Finding HTML elements by class name</li>
-        <li>Finding HTML elements by CSS selectors</li>
-        <li>Finding HTML elements by HTML object collections</li>
-    </ul>
-    <h2>Finding HTML Element by Id</h2>
-    <p>The easiest way to find an HTML element in the DOM, is by using the element id.<br />
-    This example finds the element with <font color="#ff0000">id="intro"</font>:</p>
-    <code>const element = document.getElementById("intro");</code>
-    <p>If the element is found, the method will return the element as an object (in element).<br />
-    If the element is not found, element will contain <font color="#ff0000">null</font>.</p>
-    <h2>Finding HTML Elements by Tag Name</h2>
-    <code>
-        const element = document.getElementsByTagName("p");
-    </code>
-    <p>This example finds the element with <font color="#ff0000">id="main"</font>, and then finds all <font color="#ff0000">&lt;p&gt;</font> elements inside <font color="#ff0000">"main"</font>:</p>
-    <code>
-        const x = document.getElementById("main");<br />
-        const y = x.getElementsByTagName("p");
-    </code>
-    <h2>Finding HTML Elements by Class Name</h2>
-    <p>If you want to find all HTML elements with the same class name, use <font color="#ff0000">getElementsByClassName()</font>.
-    This example returns a list of all elements with <font color="#ff0000">class="intro"</font>.</p>
-    <code>const x = document.getElementsByClassName("intro");</code>
-    <h2>Finding HTML Elements by CSS Selectors</h2>
-    <p>If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the <font color="#ff0000">querySelectorAll()</font> method.
-    This example returns a list of all <font color="#ff0000">&lt;p&gt;</font> elements with <font color="#ff0000">class="intro"</font>.</p>
-    <code>const x = document.querySelectorAll("p.intro");</code>
-    <h2>Finding HTML Elements by HTML Object Collections</h2>
-    <p>This example finds the form element with id="frm1", in the forms collection, and displays all element values:</p>
-    <pre>
+    <head>
+        <title>DOM Elements</title>
+        <!-- Linking style sheet -->
+        <link rel="stylesheet" href="../Basics/style.css" />
+    </head>
+    <body>
+        <h1>JavaScript HTML DOM Elements</h1>
+        <p>This page teaches you how to find and access HTML elements in an HTML page.</p>
+        <h2>Finding HTML Elements</h2>
+        <p>Often, with JavaScript, you want to manipulate HTML elements.<br />
+        To do so, you have to find the elements first. There are several ways to do this:</p>
+        <ul>
+            <li>Finding HTML elements by id</li>
+            <li>Finding HTML elements by tag name</li>
+            <li>Finding HTML elements by class name</li>
+            <li>Finding HTML elements by CSS selectors</li>
+            <li>Finding HTML elements by HTML object collections</li>
+        </ul>
+        <h2>Finding HTML Element by Id</h2>
+        <p>The easiest way to find an HTML element in the DOM, is by using the element id.<br />
+        This example finds the element with <font color="#ff0000">id="intro"</font>:</p>
+        <code>const element = document.getElementById("intro");</code>
+        <p>If the element is found, the method will return the element as an object (in element).<br />
+        If the element is not found, element will contain <font color="#ff0000">null</font>.</p>
+        <h2>Finding HTML Elements by Tag Name</h2>
         <code>
-            &lt;h2&gt;JavaScript HTML DOM&lt;/h2&gt;
-            &lt;p&gt;Finding HTML Elements Using &lt;b&gt;document.forms&lt;/b&gt;.&lt;/p&gt;
-            &lt;form id="frm1" action="/action_page.php"&gt;
-            First name: &lt;input type="text" name="fname" value="Donald"&gt;&lt;br&gt;
-            Last name: &lt;input type="text" name="lname" value="Duck"&gt;&lt;br&gt;&lt;br&gt;
-            &lt;input type="submit" value="Submit"&gt;
-            &lt;/form&gt; 
-            &lt;p&gt;These are the values of each element in the form:&lt;/p&gt;
-            &lt;p id="demo">&lt;/p&gt;
-    
-            const x = document.forms["frm1"];
-            let text = "";
-            for (let i = 0; i &lt; x.length; i++) {
-            text += x.elements[i].value + "&lt;br&gt;";
-            }
-            document.getElementById("demo").innerHTML = text;
+            const element = document.getElementsByTagName("p");
         </code>
-    </pre>
-</body>
+        <p>This example finds the element with <font color="#ff0000">id="main"</font>, and then finds all <font color="#ff0000">&lt;p&gt;</font> elements inside <font color="#ff0000">"main"</font>:</p>
+        <code>
+            const x = document.getElementById("main");<br />
+            const y = x.getElementsByTagName("p");
+        </code>
+        <h2>Finding HTML Elements by Class Name</h2>
+        <p>If you want to find all HTML elements with the same class name, use <font color="#ff0000">getElementsByClassName()</font>.
+        This example returns a list of all elements with <font color="#ff0000">class="intro"</font>.</p>
+        <code>const x = document.getElementsByClassName("intro");</code>
+        <h2>Finding HTML Elements by CSS Selectors</h2>
+        <p>If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the <font color="#ff0000">querySelectorAll()</font> method.
+        This example returns a list of all <font color="#ff0000">&lt;p&gt;</font> elements with <font color="#ff0000">class="intro"</font>.</p>
+        <code>const x = document.querySelectorAll("p.intro");</code>
+        <h2>Finding HTML Elements by HTML Object Collections</h2>
+        <p>This example finds the form element with id="frm1", in the forms collection, and displays all element values:</p>
+        <pre>
+            <code>
+                &lt;h2&gt;JavaScript HTML DOM&lt;/h2&gt;
+                &lt;p&gt;Finding HTML Elements Using &lt;b&gt;document.forms&lt;/b&gt;.&lt;/p&gt;
+                &lt;form id="frm1" action="/action_page.php"&gt;
+                First name: &lt;input type="text" name="fname" value="Donald"&gt;&lt;br&gt;
+                Last name: &lt;input type="text" name="lname" value="Duck"&gt;&lt;br&gt;&lt;br&gt;
+                &lt;input type="submit" value="Submit"&gt;
+                &lt;/form&gt; 
+                &lt;p&gt;These are the values of each element in the form:&lt;/p&gt;
+                &lt;p id="demo">&lt;/p&gt;
+        
+                const x = document.forms["frm1"];
+                let text = "";
+                for (let i = 0; i &lt; x.length; i++) {
+                text += x.elements[i].value + "&lt;br&gt;";
+                }
+                document.getElementById("demo").innerHTML = text;
+            </code>
+        </pre>
+    </body>
 </html>
