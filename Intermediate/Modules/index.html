@@ -5,6 +5,40 @@
     </head>
     <body>
         <h1>Modules - import and export</h1>
-        <script type="Modules" src="./main.js"></script>
+        <h2>Name Export</h2>
+        <p>
+            <code>
+                export const name 'Rasheed Jan';<br />
+                import { name } from '...';
+            </code>
+        </p>
+        <h2>Default Export</h2>
+        <p>
+            <code>
+                export default 'value';<br />
+                import anyName from '...';
+            </code>
+        </p>
+        <h2>Rename Export</h2>
+        <p>
+            <code>
+                export { name as newName };<br />
+                import { newName } from '...';
+            </code>
+        </p>
+        <h2>Export List + Rename</h2>
+        <p>
+            <code>
+                export {<br />
+                    name1,<br />
+                    name2 as newName2<br />
+                }<br />
+                import { 
+                    name1 as newName1,
+                    newName2
+                    } from '...';
+            </code>
+        </p>
+        <script src="./utils/main.js" type="module"></script>
     </body>
 </html>
