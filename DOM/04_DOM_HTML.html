@@ -3,75 +3,75 @@
 <head>
     <title>DOM HTML</title>
 </head>
-<body>
-    <h1>JavaScript HTML DOM - Changing HTML</h1>
-    <p>The document object represents your web page.
-    If you want to access any element in an HTML page, you always start with accessing the document object.<br /></p>
-    <p>The HTML DOM allows JavaScript to change the content of HTML elements.</p>
-    <h2>Changing HTML Content</h2>
-    <p>The easiest way to modify the content of an HTML element is by using the <font color="#ff0000">innerHTML</font> property.<br />
-    To change the content of an HTML element, use this syntax:</p>
-    <code>document.getElementById(id).innerHTML = new HTML</code>
-    <p>This example changes the content of a <font color="#ff0000">&lt;p&gt;</font> element:</p>
-    <pre>
-        <code>
-            &lt;html&gt;
-             &lt;body&gt;
-              &lt;p id="p1"&gt;Hello World!&lt;/p&gt;
-              &lt;script&gt;
-               document.getElementById("p1").innerHTML = "New text!";
-              &lt;/script&gt;
-             &lt;/body&gt;
-            &lt;/html&gt;
-        </code>
-    </pre>
-    <h2>Changing the Value of an Attribute</h2>
-    <p>To change the value of an HTML attribute, use this syntax:</p>
-    <code>document.getElementById(id).attribute = <i>new value</i></code>
-    <p>This example changes the value of the src attribute of an <font color="#ff0000">&lt;img&gt;</font> element:</p>
-    <pre>
-        <code>
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-             &lt;body&gt;
-              &lt;img id="myImage" src="smiley.gif"&gt;
-              &lt;script&gt;
-               document.getElementById("myImage").src = "landscape.jpg";
-              &lt;/script&gt;
-             &lt;/body&gt;
-            &lt;/html&gt;
-        </code>
-    </pre>
-    <h2>Dynamic HTML content</h2>
-    <p>JavaScript can create dynamic HTML content:<br />
-    Date : Fri Mar 11 2022 15:39:39 GMT+0500 (Pakistan Standard Time)</p>
-    <pre>
-        <code>
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-             &lt;body&gt;
-              &lt;script&gt;
-               document.getElementById("demo").innerHTML = "Date : " + Date(); &lt;/script&gt;
-             &lt;/body&gt;
-            &lt;/html&gt;
-        </code>
-    </pre>
-    <h2>document.write()</h2>
-    <p>In JavaScript, <font color="#ff0000">document.write()</font> can be used to write directly to the HTML output stream:</p>
-    <pre>
-        <code>
-            &lt;!DOCTYPE html&gt;
-            &lt;html&gt;
-             &lt;body&gt;
-              &lt;p>Bla bla bla&lt;/p&gt;
-              &lt;script&gt;
-                document.write(Date());
-              &lt;/script&gt;
-              &lt;p>Bla bla bla&lt;/p&gt;
-             &lt;/body&gt;
-            &lt;/html&gt;
-        </code>
-    </pre>
-    <p><i>Never use <font color="#ff0000">document.write()</font> after the document is loaded. It will overwrite the document.</i></p>
-</body>
+    <body>
+        <h1>JavaScript HTML DOM - Changing HTML</h1>
+        <p>The document object represents your web page.
+        If you want to access any element in an HTML page, you always start with accessing the document object.<br /></p>
+        <p>The HTML DOM allows JavaScript to change the content of HTML elements.</p>
+        <h2>Changing HTML Content</h2>
+        <p>The easiest way to modify the content of an HTML element is by using the <font color="#ff0000">innerHTML</font> property.<br />
+        To change the content of an HTML element, use this syntax:</p>
+        <code>document.getElementById(id).innerHTML = new HTML</code>
+        <p>This example changes the content of a <font color="#ff0000">&lt;p&gt;</font> element:</p>
+        <pre>
+            <code>
+                &lt;html&gt;
+                &lt;body&gt;
+                &lt;p id="p1"&gt;Hello World!&lt;/p&gt;
+                &lt;script&gt;
+                document.getElementById("p1").innerHTML = "New text!";
+                &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <h2>Changing the Value of an Attribute</h2>
+        <p>To change the value of an HTML attribute, use this syntax:</p>
+        <code>document.getElementById(id).attribute = <i>new value</i></code>
+        <p>This example changes the value of the src attribute of an <font color="#ff0000">&lt;img&gt;</font> element:</p>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;body&gt;
+                &lt;img id="myImage" src="smiley.gif"&gt;
+                &lt;script&gt;
+                document.getElementById("myImage").src = "landscape.jpg";
+                &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <h2>Dynamic HTML content</h2>
+        <p>JavaScript can create dynamic HTML content:<br />
+        Date : Fri Mar 11 2022 15:39:39 GMT+0500 (Pakistan Standard Time)</p>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;body&gt;
+                &lt;script&gt;
+                document.getElementById("demo").innerHTML = "Date : " + Date(); &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <h2>document.write()</h2>
+        <p>In JavaScript, <font color="#ff0000">document.write()</font> can be used to write directly to the HTML output stream:</p>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;body&gt;
+                &lt;p>Bla bla bla&lt;/p&gt;
+                &lt;script&gt;
+                    document.write(Date());
+                &lt;/script&gt;
+                &lt;p>Bla bla bla&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+        <p><i>Never use <font color="#ff0000">document.write()</font> after the document is loaded. It will overwrite the document.</i></p>
+    </body>
 </html>
