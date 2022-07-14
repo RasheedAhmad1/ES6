@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mouse Events</title>
+        <style>
+            /* General body styling */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .container {
+                margin-left: 12px;
+                margin-top: 12px;
+            }
+
+            /* Cards styling */
+            .cards-container {
+                /* border: 2px solid blue; */
+                margin: 12px 0px;
+            }
+            .heading {
+                text-align: center;
+            }
+
+            .cards-wrapper {
+                /* border: 2px solid red; */
+                display: flex;
+                justify-content: space-around;
+                margin: 12px 220px;
+            }
+
+            .card {
+                /* border: 2px solid green; */
+                background-color: darkcyan;
+                text-align: center;
+                padding: 8px 4px;
+            }
+
+            .card h3 {
+                background-color: aquamarine;
+                margin-bottom: 12px;
+                padding: 8px;
+            }
+
+            .card h4 {
+                background-color: beige;
+                padding: 8px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Mouse Events</h1>
+            <p>The mouse events are triggered when the different keys of mouse are pressed and/or released.</p>
+            <p>They are many</p>
+            <dl>
+                <dt>mousedown:</dt>
+                <dd>Mouse down event is triggered when either the left or right (or middle) mouse key is pressed on an HTML element.</dd>
+                <dt>mouseup:</dt>
+                <dd>Mouse up event is triggered when either the left or right (or middle) mouse key is relaesed.</dd>
+                <dt>click:</dt>
+                <dd>Click event is triggered when the left mouse button is pressed and released on the same HTML element, it requires the mousedown and mouseup event before click event.</dd>
+                <dt>dbclick:</dt>
+                <dd>Double click event is triggered when the mouse butthon is clicked twice.</dd>
+                <dt>mouseover:</dt>
+                <dd>Mouse over event is triggered when the mouse pointer enters the HTML element, and its child elements.</dd>
+                <dt>mouseenter</dt>
+                <dd>Mouse enter event is triggered when the mouse pointer enters the HTML element.</dd>
+                <dt>mousemove</dt>
+                <dd>Mouse move envent is triggered when every time the mouse is moved over the HTML element.</dd>
+            </dl>
+            <hr />
+            <div class="cards-container">
+                <div class="heading">
+                    <button id="btn">Click Me!</button>
+                </div>
+                <div class="cards-wrapper">
+                    <div class="card">
+                        <h3>MouseDown Event triggered</h3>
+                        <h4 id="down">0</h4>
+                    </div>
+                    <div class="card">
+                        <h3>MouseUp Event triggered</h3>
+                        <h4 id="up">0</h4>
+                    </div>
+                    <div class="card">
+                        <h3>MouseClick Event triggered</h3>
+                        <h4 id="click">0</h4>
+                    </div>
+                    <div class="card">
+                        <h3>MouseDoubleClick Event triggered</h3>
+                        <h4 id="dblclick">0</h4>
+                    </div>
+                    <div id="over" class="card">
+                        <h3>MouseOver Event triggered</h3>
+                        <h4>0</h4>
+                    </div>
+                    <div id="enter" class="card">
+                        <h3>MouseEnter Event triggered</h3>
+                        <h4>0</h4>
+                    </div>
+                    <div id="move" class="card">
+                        <h3>MouseMove Event triggered</h3>
+                        <h4>0</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./10_mouseEvents.js"></script>
+</html>
