@@ -25,7 +25,7 @@ Moving gradually from intermediate to advanced levell stuff
 ## Sending Emails
 ## Javascript OOP Concepts
 **Object-oriented programming** (OOP) is a method of structuring a program by bundling related properties and behaviors into individual **objects**.
-* [Classes and Instances](OOP/)
+* [Classes and Instances](OOP/classes.html)
 * [This Keyword](OOP/02_this.html)
 * [Inheritance](OOP/)
 * [Encapsulation](OOP/)
