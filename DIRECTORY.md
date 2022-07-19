@@ -32,11 +32,11 @@ Moving gradually from intermediate to advanced levell stuff
 * [Polymorphism](OOP/)
 * [Data Abstraction](OOP/)
 ## Libraries
-**jQuery**
-**React JS**
-**Redux**
+* **jQuery**
+* **React JS**
+* **Redux**
 ## Frameworks
-**Next JS**
+* **Next JS**
 ## Web Programming
 ## Database
 ## Socket Programming (Network Programming)
