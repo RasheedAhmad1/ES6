@@ -47,7 +47,7 @@
         <p>In the code you can see that we leaved the second variable name empty<br />
         thus the second element will be skipped.</p>
 
-        <h2>The rest elements</h2>
+        <h2>The rest elements (Spread Operator)</h2>
         <p>What about the rest elements, that is where 'spread operator' comes<br />
         into play.</p>
         <pre>
@@ -66,7 +66,7 @@
             C <br />
             ['C', 'D', 'E', 'F']
         </sam>
-        <p>In the code I used rest operator (...) to assign the residual values to rest variable.</p>
+        <p>In the code I used 'Spread Operator' (...) to assign the residual values to rest variable.</p>
 
         <h2>Function returning more than one value</h2>
         <p>With the help of destructuring, a function can return more than one value at a time.<br />
@@ -93,7 +93,7 @@
         <pre>
             <code>
                 const Employee = { <br />
-                    name: 'Sara', <br />
+                    name: 'Sarah', <br />
                     age: 22, <br />
                     DOB: '23/03/1996', <br />
                     address: { <br />
@@ -108,15 +108,15 @@
         </pre>
         <sam>
             Output: <br />
-            Name is: Sara and Age is: 22
+            Name is: Sarah and Age is: 22
         </sam>
 
-        <h2>Using different key names</h2>
+        <h2>Aliasing key names</h2>
         <p>To use a different  key name then --> name: FirstName</p>
         <pre>
             <code>
                 const Employee = { <br />
-                    name: 'Sara', <br />
+                    name: 'Sarah', <br />
                     age: 22, <br />
                     DOB: '23/03/1996', <br />
                     address: { <br />
@@ -131,15 +131,14 @@
         </pre>
         <sam>
             Output: <br />
-            Name is: Sara
+            Name is: Sarah and Age is: 22
         </sam>
 
         <h2>Destructuring nested objects</h2>
-        <p>To use a different  key name then --> name: FirstName</p>
         <pre>
             <code>
                 const Employee = { <br />
-                    name: 'Sara', <br />
+                    name: 'Sarah', <br />
                     age: 22, <br />
                     DOB: '23/03/1996', <br />
                     address: { <br />
@@ -149,12 +148,12 @@
                 } <br />
 
                 const {DOB, address: {city, state}} = Employee; <br />
-                console.log(DOB, city, state); <br />
+                console.log(`DOB is: ${DOB}, city is: ${city} and state is: ${state}.`); <br />
             </code>
         </pre>
         <sam>
             Output: <br />
-            23/03/1996 Peshawar KP
+            "DOB is: 23/03/1996, <address>city is: Peshawar and state is: KP"</address>
         </sam>
 
         <!-- Linking external JS file -->
