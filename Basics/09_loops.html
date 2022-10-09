@@ -46,18 +46,36 @@
       <p>Thus the loop iterates upto the length of the array</p>
 
       <h2>forEach() Loop</h2>
-      <p>When you know, how many times the Loop need to iterate then you should use for Loop.</p>
       <code>
-         var numbers = [1, 2, 3];<br />
-         var pos;<br />
-         forEach(pos = 0; pos&lt;numbers.length; pos++) {<br />
-         console.log('Position =&gt; ' +pos+ ' Value =&gt; ' + numbers[pos]);<br />
+         const vowels = ['A', 'E', 'I', 'O', 'U'];<br />
+         vowels.forEach(item => {<br />
+            console.log(item);<br />
+         });<br />
       </code>
       <samp>
          Output:<br />
-         
+         A<br />
+         E<br />
+         I<br />
+         O<br />
+         U<br />
       </samp>
-      <p></p>
+
+      <h2>forEach() Loop with index</h2>
+      <code>
+         const vowels = ['A', 'E', 'I', 'O', 'U'];<br />
+         vowels.forEach((item, i) => {<br />
+            console.log(item, i);<br />
+         });<br />
+      </code>
+      <samp>
+         Output:<br />
+         A 0<br />
+         E 1<br />
+         I 2<br />
+         O 3<br />
+         U 4<br />
+      </samp>
 
       <h2>break keywork</h2>
       <p></p>
