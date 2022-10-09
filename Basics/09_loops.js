@@ -13,11 +13,16 @@ for(pos = 0; pos<numbers.length; pos++) {
 }
 
 // forEach loop
-// var numbers = [1, 2, 3, 4, 5];
-// var pos;
-// forEach(pos = 0; pos<numbers.length; pos++) {
-//     console.log('Position => ' + pos + ' Value => ' + numbers[pos]);
-// }
+const vowels = ['A', 'E', 'I', 'O', 'U'];
+
+vowels.forEach(item => {
+    console.log(item);
+});
+
+// forEach loop with index
+vowels.forEach((item, i) => {
+    console.log(item, i);
+});
 
 // break keyword
 var numbers = [1, 2, 3, 4];
