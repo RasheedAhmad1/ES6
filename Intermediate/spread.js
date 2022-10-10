@@ -5,12 +5,13 @@
 // const newArray = [...oldArray, 1, 2];
 // const newObject = {...oldObject, newProp:5}
 
-function sum(x, y, z) {
+function plus(x, y, z) {
     return x+y+z;
 }
 const numbers = [1, 2, 3];
 
-console.log(sum(...numbers));
+console.log(plus(...numbers));
+
 
 // Function returning multiple values (Using Destructuring)
 function addAndMultiply(a, b) {
@@ -22,14 +23,26 @@ console.log(`Addition is: ${addition} and Multiplication is: ${multiplication}`)
 
 
 // Rest Operator is used to merge a list of ftn arguments into an array
-// e.g1:
+// example 1 demonstrates the residual elements of an array
 const vowels = ['A', 'E', 'I', 'O', 'U'];
 const [aa, bb, ...rest] = vowels;
 console.log(aa);
 console.log(bb);
 console.log(rest);
 
-// e.g2:
+// example 2
 function sortArgs(...args) {
     return args.sort();
 }
+
+console.log(sortArgs(2, 4, 9, 1, 0));
+
+
+// example 3
+const filter = (...args) => {
+    return args.filter(el => el <= 2);
+}
+
+console.log(filter(2, 4, 9, 1, 0));
+let result = filter(2, 4, 9, 1, 0);
+console.log(sortArgs(...result));
