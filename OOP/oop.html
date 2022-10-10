@@ -41,19 +41,50 @@
         </pre>
         <p>We can also set a constructor function for an object.</p>
 
-        <p>ECMAScript 2015, also known as ES6, introduced JavaScript Classes.<br />
-        JavaScript Classes are templates for JavaScript Objects.</p>
+        <h3>Constructor function for Person objects</h3>
+        
+        <pre>
+            <code>
+                function Person(first, last, age, eye) {
+                    this.firstName = first;
+                    this.lastName = last;
+                    this.age = age;
+                    this.eyeColor = eye;
+                    }
+            </code>
+        </pre>
 
-        <h2>JavaScript Class Syntax</h2>
+        <h3>Create a Person object</h3>
+        <pre>
+            <code>
+                const myFather = new Person("John", "Doe", 50, "blue");
+            </code>
+        </pre>
+
+        <p>ECMAScript 2015, also known as ES6, introduced JavaScript Classes.<br />
+        JavaScript Classes are templates/blueprints for JavaScript Objects.</p>
+        <h2>Classes</h2>
+        <h3>Class Syntax</h3>
+        <pre>
+            <code>
+                class Classname {
+                    constructor(); // A method which sets all properties and called automatically when an object is created
+
+                    name = "Max"; // properties are like variables attached to classes/objects
+
+                    call = () => { ... } // Methods are like functions attached to classes/objects
+                }
+            </code>
+        </pre>
         <p>Use the keyword class to create a class.<br />
         Always add a method named constructor():<br />
         Example:</p>
         <pre>
             <code>
                 class Employee {
-                    constructor (name, age) {
-                        this.name = name;
-                        this.age = age;
+                    constructor (givenName, givenNge) {
+                        this.name = givenName;
+                        this.age = givenNge;
                     }
                 }
             </code>
@@ -61,15 +92,15 @@
         <p>The example above creates a class named "Employee".<br />
         The class has two initial properties: "name" and "age".</p>
 
-        <h2>Using a class</h2>
-        <p>When you have a class, you can use the class to create its objects:<br />
+        <h3>Using a class</h3>
+        <p>When you have a class, you can use the class to create its objects<br />
         Example:</p>
         <code>let Employee1 = new Employee('Ali', 24);<br />
               let Employee2 = new Employee('Ahmad' 25);</code>
         <p>The example above uses the 'Employee' class to create two objects.<br />
         The constructor method is called automatically when a new object is created.</p>
 
-        <h2>The Constructor Method</h2>
+        <h3>The Constructor Method</h3>
         <p>The constructor method is a special method:</p>
         <ul>
             <li>It has to have the exact name "constructor"</li>
@@ -78,7 +109,7 @@
         </ul>
         <p>If you do not define a constructor method, JavaScript will add an empty constructor method.</p>
 
-        <h2>Class Methods</h2>
+        <h3>Class Methods</h3>
         <p>Create a Class method named "joining_date", that returns the employee "Joining Date":</p>
         <pre>
             <code>
@@ -119,7 +150,7 @@
             Age: 32<br />
             Joining data: 2012
         </samp>
-        <p>Invoking 'static' method</p>
+        <h3>Invoking 'static' method</h3>
         <code>
             console.log(Employee.add(2, 3));<br />
         </code>
@@ -144,12 +175,12 @@
             </code>
         </pre>
         <sam>
-            Output: Programmer {name: 'Ahad', age: 23, year: 4, language: 'JavaScript'}
+            Output: Programmer {name: 'Ahad', age: 23, year: 4, language: 'JavaScript'}
         </sam>
 
         <h2>this keyword</h2>
         <p>In JavaScript, 'this' keyword refers to the current context. The this keyword<br />
-        always refers to a single object and it is usually used inside the a function or<br />
+        always refers to a single object and it is usually used inside a function or<br />
         a method to access properties and methods which are a part of the object which is<br />
         associated with the function.</p>
 

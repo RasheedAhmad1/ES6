@@ -2,7 +2,7 @@ class Employee {
         constructor(givenName, givenAge, givenYears_of_service) {
             this.name = givenName;
             this.age = givenAge;
-            this.year = givenYears_of_service;
+            this.years = givenYears_of_service;
         }
 
         // User-defined method
@@ -10,11 +10,9 @@ class Employee {
             let age = this.age;
             let name = this.name;
 
-            let date = new Date();
-            date = date.getFullYear() - this.year;
-            return `Name: ${name} 
-            Age: ${age} 
-            Joining data: ${date}`;
+            let joining_date = new Date();
+            joining_date = joining_date.getFullYear() - this.years;
+            return `Name: ${name}, Age: ${age} and Joining date is: ${joining_date}`;
         }
         
         // Static method: which can be used/invoked without an object
@@ -23,7 +21,7 @@ class Employee {
         }
     }
 
-// Initialinzing an object 'emp1'
+// Initialinzing an object 'emp1', the constructor is called automatically
 let emp1 = new Employee('Akram', 32, 10);
 
 // Invoking class method
@@ -41,5 +39,7 @@ class Programmer extends Employee {
     }
 }
 
-let p1 = new Programmer('Ahad', 23, 4, 'JavaScript');
+let p1 = new Programmer('Abid', 24, 4, 'JavaScript');
+let p2 = new Programmer('Mufassir', 25, 4, 'React');
 console.log(p1);
+console.log(p2);
