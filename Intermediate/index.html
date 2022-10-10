@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Intermediate Concepts</title>
+    </head>
+    <body>
+        <h1>JavaScript Intermediate Concepts</h1>
+        <h2>setInterval()</h2>
+        <p>The setInterval() method calls a function at specified intervals (in milliseconds).<br />
+        The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.<br />
+        1 second = 1000 milliseconds.</p>
+        <h3>Syntax:</h3>
+        <p>setInterval(function, milliseconds, param1, param2, ...)</p>
+        <h3>Example:</h3>
+        <pre>
+            <code>
+                setInterval(myTimer, 1000);
+
+                function myTimer() {
+                const date = new Date();
+                document.getElementById("demo1").innerHTML = date.toLocaleTimeString();
+                }
+            </code>
+        </pre>
+        <p>Output:</p>
+        <p id="demo1"></p>
+        <button onclick="myStopFunction()">Stop time</button>
+        <p>Note: To execute the function only once, use the setTimeout() method instead.</p>
+
+        <h2>clearInterval()</h2>
+        <p>Using clearInterval() to stop the digital watch:</p>
+        <pre>
+            <code>
+                const myInterval = setInterval(myTimer, 1000);
+
+                function myTimer() {
+                const date = new Date();
+                document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+                }
+
+                // Use this function on the button with "onClick" event
+                function myStopFunction() {
+                clearInterval(myInterval);
+                }
+            </code>
+        </pre>
+
+        <h2>setTimeout()</h2>
+        <p>The setTimeout() method calls a function after a number of milliseconds.<br />
+        1 second = 1000 milliseconds.<br />
+        <h3>Syntax:</h3>
+        <p>setTimeout(function, milliseconds, param1, param2, ...)</p>
+        <h3>Example:</h3>
+        <pre>
+            <code>
+                let timeout;
+
+                function myFunction() {
+                timeout = setTimeout(alertFunc, 3000);
+                }
+
+                function alertFunc() {
+                    document.getElementById("demo2").innerHTML = "Happy Birthday!";
+                }
+            </code>
+        </pre>
+        <p>Click the button. Wait 3 seconds for Greeting!</p>
+        <h2 id="demo2"></h2>
+        <button onclick="myFunction()">Try it</button>
+
+        <p>Notes: The setTimeout() is executed only once.<br />
+        If you need repeated executions, use setInterval() instead.<br />
+        Use the clearTimeout() method to prevent the function from starting.</p>
+
+        <h2>clearTimeout()</h2>
+        <p>How to prevent myGreeting() to execute:</p>
+        <pre>
+            <code>
+                const myTimeout = setTimeout(myGreeting, 3000);
+
+                function myGreeting() {
+                document.getElementById("demo").innerHTML = "Happy Birthday to You !!"
+                }
+
+                function myStopFunction() {
+                clearTimeout(myTimeout);
+                }
+            </code>
+        </pre>
+        <p>Click the button to prevent the timeout to execute. (You have 3 seconds).</p>
+        <button onclick="myStopTimeout()">Stop it</button>
+
+        <!-- Hoisting -->
+        <dl>
+            <dt>Hoisting</dt>
+            <dd>The mechanism of where variables and functions can be used before <br />
+            declaring them is called Hoisting. <br />
+            OR Hoisting is JavaScript's default behavior of moving declarations to the top.</dd>
+        </dl>
+
+        <!-- Arrow Function -->
+        <h1>JavaScript Arrow function</h1>
+        <p>A named function with two parameters and a return statement.</p>
+        <pre>
+            <code>
+                function sum(a, b) {
+                    return a + b;
+                }
+            </code>
+        </pre>
+        <p>The arrow function for this will be:</p>
+        <pre>
+            <code>
+                let sum = (a, b) => {
+                    return a + b;
+                    }
+                OR
+                let sum = (a, b) => a + b;
+            </code>
+        </pre>
+
+        <p>A named function with only one parameter and a return statement.</p>
+        <pre>
+            <code>
+                function isPositive(anumber) {
+                    return number >= 0;
+                }
+            </code>
+        </pre>
+        <p>The arrow function for this will be:</p>
+        <pre>
+            <code>
+                let isPositive = (number) => {
+                    return number >= 0;
+                }
+                OR
+                let isPositive = number => number >= 0;
+            </code>
+        </pre>
+
+        <p>A named function with no parameters and a return statement.</p>
+        <pre>
+            <code>
+                function randomNumber() {
+                    return Math.random;
+                }
+            </code>
+        </pre>
+        <p>The arrow function for this will be:</p>
+        <pre>
+            <code>
+                let randomNumber = () => {
+                    return Math.random;
+                }
+                OR
+                let randomNumber = () => Math.random;
+            </code>
+        </pre>
+
+        <p>An annonymous function</p>
+        <pre>
+            <code>
+                document.addEventListener('click', function() {
+                    console.log('Clicked!');
+                });
+            </code>
+        </pre>
+        <p>The arrow function for this will be:</p>
+        <pre>
+            <code>
+                document.addEventListener('click', () => {
+                    console.log('Clicked!');
+                });
+                OR
+                document.addEventListener('click', () => console.log('Clicked!'));
+            </code>
+        </pre>
+
+        <!-- Array and Object Destructuring -->
+        <h1>Array  and Object Destructuring</h1>
+        <p>Destructuring is a JavaScript expression that makes it possible to unpack values from arrays,<br />
+        or properties from objects, into distinct variables.<br />
+        That is, we can extract data from arrays and objects and assign them to variables</p>
+
+        <h2>Array Destructuring</h2>
+        <p>Use square brackets around variable names to store the values</p>
+        <pre>
+            <code>
+                const alphabets = ['A', 'B', 'C', 'D', 'E', 'F']; <br />
+                // Array destructuring <br />
+                const [a, b] = alphabets; <br />
+                console.log(a); <br />
+                console.log(b); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            A <br />
+            B 
+        </sam>
+
+        <h2>Skipping a value</h2>
+        <p>To skip a value just leave the 'name' of the variable empty</p>
+        <pre>
+            <code>
+                const alphabets = ['A', 'B', 'C', 'D', 'E', 'F']; <br />
+                // Skipping second element <br />
+                const [aa, , cc] = alphabets; <br />
+                console.log(aa); <br />
+                console.log(cc); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            A <br />
+            C 
+        </sam>
+        <p>In the code you can see that we leaved the second variable name empty<br />
+        thus the second element will be skipped.</p>
+
+        <h2>The rest elements (Spread Operator)</h2>
+        <p>What about the rest elements, that is where 'spread operator' comes<br />
+        into play.</p>
+        <pre>
+            <code>
+                const alphabets = ['A', 'B', 'C', 'D', 'E', 'F']; <br />
+                // rest operator (...) <br />
+                const [aaa, bbb, ...rest] = alphabets; <br />
+                console.log(aaa); <br />
+                console.log(bbb); <br />
+                console.log(rest); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            A <br />
+            C <br />
+            ['C', 'D', 'E', 'F']
+        </sam>
+        <p>In the code I used 'Spread Operator' (...) to assign the residual values to rest variable.</p>
+
+        <h2>Function returning more than one value</h2>
+        <p>With the help of destructuring, a function can return more than one value at a time.<br />
+        into play.</p>
+        <pre>
+            <code>
+                // Function returning multiple values <br />
+                function sumAndMultiply (a, b) { <br />
+                    return [a+b, a*b]; <br />
+                } <br />
+                const [sum, multiply] = sumAndMultiply(2, 3); <br />
+                console.log(`Sum is: ${sum}, and Multiplication is: ${multiply}`); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            Sum is: 5, and Multiplication is: 6
+        </sam>
+
+        <h2>Object Destructuring</h2>
+        <p>Use curly braces around key names to store the values.<br />
+        'Array destructuring' is position based,
+        while 'Object destructuring' is based on the names of the keys.</p>
+        <pre>
+            <code>
+                const Employee = { <br />
+                    name: 'Sarah', <br />
+                    age: 22, <br />
+                    DOB: '23/03/1996', <br />
+                    address: { <br />
+                        city: 'Peshawar', <br />
+                        state: 'KP' <br />
+                    } <br />
+                } <br />
+                // Object destructuring <br />
+                let [name, age] = Employee; <br />
+                console.log(`Name is: ${name} and Age is: ${age}); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            Name is: Sarah and Age is: 22
+        </sam>
+
+        <h2>Aliasing key names</h2>
+        <p>To use a different  key name then --> name: FirstName</p>
+        <pre>
+            <code>
+                const Employee = { <br />
+                    name: 'Sarah', <br />
+                    age: 22, <br />
+                    DOB: '23/03/1996', <br />
+                    address: { <br />
+                        city: 'Peshawar', <br />
+                        state: 'KP' <br />
+                    } <br />
+                } <br />
+                // Object destructuring <br />
+                let [name: firstName, age] = Employee; <br />
+                console.log(`Name is: ${firstName} and Age is: ${age}); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            Name is: Sarah and Age is: 22
+        </sam>
+
+        <h2>Destructuring nested objects</h2>
+        <pre>
+            <code>
+                const Employee = { <br />
+                    name: 'Sarah', <br />
+                    age: 22, <br />
+                    DOB: '23/03/1996', <br />
+                    address: { <br />
+                        city: 'Peshawar', <br />
+                        state: 'KP' <br />
+                    } <br />
+                } <br />
+
+                const {DOB, address: {city, state}} = Employee; <br />
+                console.log(`DOB is: ${DOB}, city is: ${city} and state is: ${state}.`); <br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            "DOB is: 23/03/1996, <address>city is: Peshawar and state is: KP"</address>
+        </sam>
+
+        <!-- Iterables -->
+
+        <!-- JavaScript file linked -->
+        <script src="./intervals.js"></script>
+        <script src="hoisting.js"></script>
+        <script src="arrow_function.js"></script>
+        <script src="./destructuring.js"></script>
+        <script src="./iterables.js"></script>
+    </body>
+</html>
