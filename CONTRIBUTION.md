@@ -1,6 +1,6 @@
 # Contributing guidelines
 ## Before contributing
-Welcome to [Javascript!](https://github.com/RasheedAhmad1/ES6) Before sending your pull requests, make sure that you read the whole guidelines. If you have any doubt on the contributing guide, please feel free to [state it clearly in an issue](https://github.com/RasheedAhmad1/ES6/issues/new) or ask the community on [Gitter](https://gitter.im/RasheedAhmad1/community).
+Welcome to [Javascript!](https://github.com/RasheedAhmad1/JavaScript-ES6) Before sending your pull requests, make sure that you read the whole guidelines. If you have any doubt on the contributing guide, please feel free to [state it clearly in an issue](https://github.com/RasheedAhmad1/JavaScript-ES6/issues/new) or ask the community on [Gitter](https://gitter.im/RasheedAhmad1/community).
 
 # Contributing
 ## Contributor
