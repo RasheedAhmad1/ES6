@@ -334,7 +334,77 @@
 
 
         <!-- Spread and Rest Operators -->
-        
+
+        <!-- Primitive and Reference Types -->
+        <h2>Primitive Types</h2>
+        <p>Numbers, strings, booleans, these are so-called primitive types whenever you 
+        reassign or you store a variable in another variable.It will copy the value.</p>
+        <pre>
+            <code>
+                num1 = 1;<br />
+                num2 = num1;<br />
+                console.log(num1); // 1<br />
+                console.log(num2);<br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            1 <br />
+            1 
+        </sam>
+
+        <h2>Reference Types</h2>
+        <p>Objects and Arrays are reference types.</p>
+        <pre>
+            <code>
+                const Person1 = {<br />
+                    name: 'Adam'<br />
+                }<br />
+                
+                const Person2 = Person1;<br />
+                
+                console.log(Person1);<br />
+                console.log(Person2);<br />
+            </code>
+        </pre>
+        <sam>
+            Output: <br />
+            [object Object] { <br />
+                name: "Adam" <br />
+              } <br />
+
+              [object Object] { <br />
+                name: "Adam" <br />
+              } <br />
+        </sam>
+        <p>I create my personal object which just has a name here and I now create a Person2 and assigned
+            person1 as a value here.
+            If I console log.
+            Person2 and hit run, it will print the same value as the Person1 but it will not actually have
+            copied the Person1 instead.
+            Person1 the object is stored in memory and in the constant Person1 we store a pointer to that place in memory.
+            And if we then assign Person1 to Person2 that pointer will be copied.</p>
+        <p>If you copy objects or arrays like this because you then may manipulate one object in one place in the
+        app and accidentally manipulate another usage of the same object in another place of the app.
+        </p>
+        <p>Therefore we will learn techniques to copy this in an immutable way which means, we copy that by really
+        copying the object and not just a pointer. for that we can use the spread operator.</p>
+        <pre>
+            <code>
+                const Person1 = {<br />
+                    name: 'Adam'<br />
+                }<br />
+                
+                const Person2 = {
+                    ...Person1
+                }<br />
+                
+                console.log(Person1);<br />
+                console.log(Person2);<br />
+            </code>
+        </pre>
+        <p>This will pull out the properties and the values of the properties from the object and add it to this
+        newly created object here and we do create a new one with the curly braces.</p>
 
         <!-- JavaScript file linked -->
         <script src="./intervals.js"></script>
