@@ -1,11 +1,15 @@
 // Name export
 export const name = 'Rasheed Jan';
+export function add(c, d) {
+    return c + d;
+}
 
 // Default export
-function addNubers(a, b) {
-    return a + b;
+// A module can have only one default export
+function multiplyNumbers(a, b) {
+    return a * b;
 }
-export default addNubers;
+export default multiplyNumbers;
 
 // Rename export
 const fName = 'Rasheed';
